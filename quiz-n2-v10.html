@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Valeur Cible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
+    <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Valeur Cible</h1>
+            <p class="text-gray-600">Niveau 2 - Vidéo 10</p>
+            <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances</p>
+        </div>
+
+        <form id="quizForm" class="space-y-6">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. La Valeur Cible permet de :</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="a" class="w-4 h-4">
+                        <span>Trouver quelle valeur d'entrée permet d'atteindre un résultat souhaité</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="b" class="w-4 h-4">
+                        <span>Créer des graphiques automatiquement</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="c" class="w-4 h-4">
+                        <span>Trier des données</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4">
+                        <span>Protéger une cellule</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour accéder à la Valeur Cible :</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="a" class="w-4 h-4">
+                        <span>Onglet Données > Analyse de scénarios > Valeur cible</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="b" class="w-4 h-4">
+                        <span>Onglet Insertion</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="c" class="w-4 h-4">
+                        <span>Onglet Formules</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4">
+                        <span>Ctrl + V</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La Valeur Cible nécessite :</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="a" class="w-4 h-4">
+                        <span>Une cellule résultat avec formule et une cellule à modifier</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="b" class="w-4 h-4">
+                        <span>Seulement du texte</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="c" class="w-4 h-4">
+                        <span>Au moins 10 cellules</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4">
+                        <span>Un graphique</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Exemple d'utilisation de Valeur Cible :</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="a" class="w-4 h-4">
+                        <span>Trouver le prix de vente pour atteindre un bénéfice de 10 000€</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="b" class="w-4 h-4">
+                        <span>Créer un tableau croisé dynamique</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="c" class="w-4 h-4">
+                        <span>Trier par ordre alphabétique</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4">
+                        <span>Changer la couleur des cellules</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. La différence entre Valeur Cible et Solveur :</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="a" class="w-4 h-4">
+                        <span>Valeur Cible modifie 1 cellule, Solveur peut modifier plusieurs cellules</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="b" class="w-4 h-4">
+                        <span>Ils sont identiques</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="c" class="w-4 h-4">
+                        <span>Solveur n'existe pas dans Excel</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4">
+                        <span>Valeur Cible est plus complexe</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">✓ Valider</button>
+            </div>
+        </form>
+
+        <div id="results" class="hidden">
+            <div class="bg-white rounded-lg shadow-xl p-8 text-center">
+                <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
+                <div id="message" class="text-xl mb-6"></div>
+                <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700">🔄 Refaire</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700">← Retour</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
+        
+        function getNomEtudiant() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nomFromUrl = urlParams.get('nom');
+            if (nomFromUrl) {
+                localStorage.setItem('currentStudentName', nomFromUrl);
+                return nomFromUrl;
+            }
+            return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
+        }
+        
+        async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
+            if (!GOOGLE_SCRIPT_URL) return;
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'quiz',
+                        nom: nomEtudiant,
+                        quiz: quizId,
+                        score: score,
+                        total: total,
+                        pourcentage: pourcentage
+                    })
+                });
+                console.log("Résultat du quiz envoyé");
+            } catch (error) {
+                console.error("Erreur:", error);
+            }
+        }
+
+        const quizId = "N2-V10 Valeur Cible";
+        const nomEtudiant = getNomEtudiant();
+
+        const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
+        if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
+            const nameTag = document.createElement('p');
+            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2';
+            nameTag.textContent = '👤 ' + nomEtudiant;
+            headerDiv.appendChild(nameTag);
+        }
+
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
+        const explanations = {
+            q1: 'La Valeur Cible trouve automatiquement quelle valeur d\'entrée permet d\'obtenir le résultat souhaité.',
+            q2: 'On y accède via Données > Analyse de scénarios > Valeur cible (ou Analyse de simulation).',
+            q3: 'Il faut: une cellule contenant une formule (le résultat) et une cellule à modifier (la variable).',
+            q4: 'Exemple typique: "Quel prix de vente me permet d\'atteindre 10000€ de bénéfice ?"',
+            q5: 'Valeur Cible change UNE seule cellule. Le Solveur (plus avancé) peut modifier plusieurs cellules avec contraintes.'
+        };
+
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
+                    score++;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Q${question.slice(1)}</span> - ${explanations[question]}</div>`;
+                } else {
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Q${question.slice(1)}</span> - ${explanations[question]}</div>`;
+                }
+            }
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            if (percentage >= 80) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                document.getElementById('message').textContent = 'Excellent ! Vous maîtrisez Valeur Cible !';
+            } else if (percentage >= 60) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                document.getElementById('message').textContent = 'Bien ! Pratiquez avec Valeur Cible.';
+            } else {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                document.getElementById('message').textContent = 'Revoyez la vidéo sur Valeur Cible.';
+            }
+            document.getElementById('details').innerHTML = details;
+            document.getElementById('quizForm').style.display = 'none';
+            document.getElementById('results').classList.remove('hidden');
+            
+            envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
+            
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
