@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Le mode tableau 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen p-6">
+    <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                    🎯 Quiz - Le mode tableau 2
+                </h1>
+                <p class="text-gray-600">Niveau 2 - Vidéo 16</p>
+                <p class="text-sm text-indigo-600 font-semibold mt-2">6 questions</p>
+                <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
+            </div>
+
+            <div id="quiz-container"></div>
+
+            <div id="result-container" class="hidden mt-8">
+                <div class="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl p-6 text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Résultat</h2>
+                    <p id="score" class="text-4xl font-bold text-indigo-600 mb-4"></p>
+                    <p id="message" class="text-gray-700 mb-4"></p>
+                    <button onclick="restartQuiz()" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-semibold">
+                        🔄 Recommencer
+                    </button>
+                    <button onclick="window.close()" class="ml-4 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold">
+                        ← Retour au suivi
+                    </button>
+                </div>
+            </div>
+
+            <button id="submit-btn" onclick="submitQuiz()" class="w-full mt-6 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold">
+                ✅ Valider mes réponses
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ⚠️ REMPLACEZ PAR VOTRE URL GOOGLE SCRIPT
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
+        
+        // Récupérer le nom de l'étudiant depuis l'URL ou localStorage
+        function getNomEtudiant() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nomFromUrl = urlParams.get('nom');
+            
+            if (nomFromUrl) {
+                localStorage.setItem('currentStudentName', nomFromUrl);
+                return nomFromUrl;
+            }
+            
+            return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
+        }
+        
+        // Envoyer le résultat du quiz à Google Sheets
+        async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
+                console.log("URL Google Script non configurée");
+                return;
+            }
+            
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quiz',
+                        nom: nomEtudiant,
+                        quiz: quizId,
+                        score: score,
+                        total: total,
+                        pourcentage: pourcentage
+                    })
+                });
+                console.log("Résultat du quiz envoyé à Google Sheets");
+            } catch (error) {
+                console.error("Erreur envoi quiz:", error);
+            }
+        }
+
+        // Identifier le quiz
+        const quizId = "N2-V16 Mode tableau 2";
+        const nomEtudiant = getNomEtudiant();
+
+        // Afficher le nom dans le header
+        const headerDiv = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-8.mb-6');
+        if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
+            const nameTag = document.createElement('p');
+            nameTag.className = 'text-sm text-purple-600 font-medium mt-2 text-center';
+            nameTag.textContent = '👤 ' + nomEtudiant;
+            headerDiv.querySelector('.text-center').appendChild(nameTag);
+        }
+
+        const questions = [
+            {
+                question: "Comment s'appelle l'outil qui permet de filtrer visuellement un tableau Excel en cliquant sur des boutons ?",
+                options: [
+                    "Le filtre rapide",
+                    "Le segment",
+                    "Le bouton de tri",
+                    "Le filtre visuel"
+                ],
+                correct: 1,
+                explanation: "Les segments (ou slicers) sont des outils visuels qui permettent de filtrer facilement les données d'un tableau."
+            },
+            {
+                question: "Dans un tableau Excel, quelle fonction permet de compter le nombre de lignes visibles après un filtrage ?",
+                options: [
+                    "NB()",
+                    "NBVAL()",
+                    "SOUS.TOTAL()",
+                    "SOMME()"
+                ],
+                correct: 2,
+                explanation: "SOUS.TOTAL() calcule uniquement sur les lignes visibles et ignore les lignes masquées par les filtres."
+            },
+            {
+                question: "Quelle est la syntaxe correcte pour référencer toute la colonne 'Prix' dans un tableau nommé 'Ventes' ?",
+                options: [
+                    "Ventes[Prix]",
+                    "[Ventes]Prix",
+                    "Ventes.Prix",
+                    "Prix[Ventes]"
+                ],
+                correct: 0,
+                explanation: "La syntaxe correcte est NomTableau[NomColonne], soit Ventes[Prix] dans ce cas."
+            },
+            {
+                question: "Quand vous supprimez une colonne d'un tableau Excel, que se passe-t-il avec les formules qui référencent cette colonne ?",
+                options: [
+                    "Elles affichent #REF!",
+                    "Elles s'adaptent automatiquement",
+                    "Elles sont supprimées",
+                    "Excel demande confirmation"
+                ],
+                correct: 1,
+                explanation: "Les formules avec références structurées s'adaptent automatiquement aux modifications de structure du tableau."
+            },
+            {
+                question: "Quelle option permet de dupliquer rapidement le style d'un tableau vers un autre ?",
+                options: [
+                    "Copier le format",
+                    "Dupliquer le style de tableau",
+                    "Reproduire la mise en forme",
+                    "Créer un style de tableau"
+                ],
+                correct: 1,
+                explanation: "L'option 'Dupliquer le style de tableau' permet de réutiliser un style existant sur un nouveau tableau."
+            },
+            {
+                question: "Quel avantage offre la ligne des totaux d'un tableau par rapport à une formule normale ?",
+                options: [
+                    "Elle calcule plus rapidement",
+                    "Elle propose un menu déroulant avec différentes fonctions",
+                    "Elle ne peut faire que des sommes",
+                    "Elle change automatiquement de couleur"
+                ],
+                correct: 1,
+                explanation: "La ligne des totaux offre un menu déroulant pratique avec plusieurs fonctions (Somme, Moyenne, Nombre, etc.)."
+            }
+        ];
+
+        let userAnswers = [];
+
+        function displayQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = questions.map((q, index) => `
+                <div class="mb-8 p-6 bg-gray-50 rounded-lg border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-lg text-gray-800 mb-4">
+                        Question ${index + 1} : ${q.question}
+                    </h3>
+                    <div class="space-y-3">
+                        ${q.options.map((option, optIndex) => `
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-indigo-50 transition-colors border border-gray-200">
+                                <input type="radio" name="q${index}" value="${optIndex}" 
+                                    class="w-5 h-5 text-indigo-600 mr-3"
+                                    onchange="saveAnswer(${index}, ${optIndex})">
+                                <span class="text-gray-700">${option}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                    <div id="feedback-${index}" class="hidden mt-4 p-4 rounded-lg"></div>
+                </div>
+            `).join('');
+        }
+
+        function saveAnswer(questionIndex, answerIndex) {
+            userAnswers[questionIndex] = answerIndex;
+        }
+
+        function submitQuiz() {
+            if (userAnswers.filter(a => a !== undefined).length < questions.length) {
+                alert('⚠️ Veuillez répondre à toutes les questions avant de valider.');
+                return;
+            }
+
+            let score = 0;
+            questions.forEach((q, index) => {
+                const feedbackDiv = document.getElementById(`feedback-${index}`);
+                const isCorrect = userAnswers[index] === q.correct;
+                
+                if (isCorrect) {
+                    score++;
+                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-300';
+                    feedbackDiv.innerHTML = `
+                        <p class="text-green-800 font-semibold">✅ Correct !</p>
+                        <p class="text-green-700 text-sm mt-1">${q.explanation}</p>
+                    `;
+                } else {
+                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300';
+                    feedbackDiv.innerHTML = `
+                        <p class="text-red-800 font-semibold">❌ Incorrect</p>
+                        <p class="text-red-700 text-sm mt-1">La bonne réponse était : <strong>${q.options[q.correct]}</strong></p>
+                        <p class="text-red-700 text-sm mt-1">${q.explanation}</p>
+                    `;
+                }
+                feedbackDiv.classList.remove('hidden');
+            });
+
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage === 100) {
+                message = '🎉 Excellent ! Vous maîtrisez parfaitement le mode tableau avancé !';
+            } else if (percentage >= 80) {
+                message = '👏 Très bien ! Les concepts avancés sont bien compris.';
+            } else if (percentage >= 60) {
+                message = '👍 Bon travail ! Revoyez quelques points pour perfectionner.';
+            } else {
+                message = '📚 Revoyez la vidéo pour mieux comprendre les fonctionnalités avancées.';
+            }
+            
+            document.getElementById('message').textContent = message;
+            document.getElementById('result-container').classList.remove('hidden');
+            document.getElementById('submit-btn').classList.add('hidden');
+            
+            // Envoyer le résultat à Google Sheets
+            envoyerResultatQuiz(nomEtudiant, quizId, score, questions.length, percentage);
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function restartQuiz() {
+            userAnswers = [];
+            document.getElementById('result-container').classList.add('hidden');
+            document.getElementById('submit-btn').classList.remove('hidden');
+            displayQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        displayQuiz();
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Le mode tableau 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen p-6">
+    <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                    🎯 Quiz - Le mode tableau 1
+                </h1>
+                <p class="text-gray-600">Niveau 2 - Vidéo 15</p>
+                <p class="text-sm text-purple-600 font-semibold mt-2">6 questions</p>
+                <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
+            </div>
+
+            <div id="quiz-container"></div>
+
+            <div id="result-container" class="hidden mt-8">
+                <div class="bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl p-6 text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Résultat</h2>
+                    <p id="score" class="text-4xl font-bold text-purple-600 mb-4"></p>
+                    <p id="message" class="text-gray-700 mb-4"></p>
+                    <button onclick="restartQuiz()" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold">
+                        🔄 Recommencer
+                    </button>
+                    <button onclick="window.close()" class="ml-4 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold">
+                        ← Retour au suivi
+                    </button>
+                </div>
+            </div>
+
+            <button id="submit-btn" onclick="submitQuiz()" class="w-full mt-6 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-lg font-semibold">
+                ✅ Valider mes réponses
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ⚠️ REMPLACEZ PAR VOTRE URL GOOGLE SCRIPT
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
+        
+        // Récupérer le nom de l'étudiant depuis l'URL ou localStorage
+        function getNomEtudiant() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nomFromUrl = urlParams.get('nom');
+            
+            if (nomFromUrl) {
+                localStorage.setItem('currentStudentName', nomFromUrl);
+                return nomFromUrl;
+            }
+            
+            return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
+        }
+        
+        // Envoyer le résultat du quiz à Google Sheets
+        async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
+                console.log("URL Google Script non configurée");
+                return;
+            }
+            
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quiz',
+                        nom: nomEtudiant,
+                        quiz: quizId,
+                        score: score,
+                        total: total,
+                        pourcentage: pourcentage
+                    })
+                });
+                console.log("Résultat du quiz envoyé à Google Sheets");
+            } catch (error) {
+                console.error("Erreur envoi quiz:", error);
+            }
+        }
+
+        // Identifier le quiz
+        const quizId = "N2-V15 Mode tableau 1";
+        const nomEtudiant = getNomEtudiant();
+
+        // Afficher le nom dans le header
+        const headerDiv = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-8.mb-6');
+        if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
+            const nameTag = document.createElement('p');
+            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2 text-center';
+            nameTag.textContent = '👤 ' + nomEtudiant;
+            headerDiv.querySelector('.text-center').appendChild(nameTag);
+        }
+
+        const questions = [
+            {
+                question: "Quel raccourci clavier permet de convertir rapidement une plage de données en tableau Excel ?",
+                options: [
+                    "Ctrl + T",
+                    "Ctrl + L",
+                    "Ctrl + M",
+                    "Ctrl + K"
+                ],
+                correct: 0,
+                explanation: "Ctrl + T (ou Ctrl + L sur certaines versions) permet de convertir rapidement une plage en tableau."
+            },
+            {
+                question: "Quel est l'avantage principal du mode tableau par rapport à une plage normale ?",
+                options: [
+                    "Il change uniquement la couleur des cellules",
+                    "Les formules s'adaptent automatiquement quand on ajoute des données",
+                    "Il permet uniquement de trier les données",
+                    "Il bloque les cellules pour éviter les modifications"
+                ],
+                correct: 1,
+                explanation: "Le mode tableau offre des formules dynamiques qui s'étendent automatiquement lors de l'ajout de nouvelles lignes."
+            },
+            {
+                question: "Comment s'appellent les références utilisées dans les tableaux Excel (exemple : [Montant]) ?",
+                options: [
+                    "Références relatives",
+                    "Références absolues",
+                    "Références structurées",
+                    "Références nommées"
+                ],
+                correct: 2,
+                explanation: "Les références structurées utilisent les noms de colonnes entre crochets, comme [Montant] ou [Nom]."
+            },
+            {
+                question: "Que se passe-t-il automatiquement quand vous tapez une formule dans la première cellule d'une colonne de tableau ?",
+                options: [
+                    "Rien de spécial",
+                    "La formule se copie automatiquement sur toute la colonne",
+                    "Excel demande une confirmation",
+                    "La cellule devient rouge"
+                ],
+                correct: 1,
+                explanation: "Dans un tableau Excel, une formule saisie dans une cellule se propage automatiquement à toute la colonne."
+            },
+            {
+                question: "Quelle ligne apparaît automatiquement en bas d'un tableau Excel pour faire des calculs ?",
+                options: [
+                    "La ligne de résumé",
+                    "La ligne de calcul",
+                    "La ligne des totaux",
+                    "La ligne de fin"
+                ],
+                correct: 2,
+                explanation: "La 'Ligne des totaux' permet d'ajouter facilement des calculs (somme, moyenne, etc.) en bas du tableau."
+            },
+            {
+                question: "Dans l'onglet 'Création de tableau', quelle option permet de revenir à une plage normale ?",
+                options: [
+                    "Supprimer le tableau",
+                    "Annuler le tableau",
+                    "Convertir en plage",
+                    "Retour à la normale"
+                ],
+                correct: 2,
+                explanation: "L'option 'Convertir en plage' permet de transformer un tableau en plage normale tout en conservant les données."
+            }
+        ];
+
+        let userAnswers = [];
+
+        function displayQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = questions.map((q, index) => `
+                <div class="mb-8 p-6 bg-gray-50 rounded-lg border-l-4 border-purple-500">
+                    <h3 class="font-bold text-lg text-gray-800 mb-4">
+                        Question ${index + 1} : ${q.question}
+                    </h3>
+                    <div class="space-y-3">
+                        ${q.options.map((option, optIndex) => `
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-purple-50 transition-colors border border-gray-200">
+                                <input type="radio" name="q${index}" value="${optIndex}" 
+                                    class="w-5 h-5 text-purple-600 mr-3"
+                                    onchange="saveAnswer(${index}, ${optIndex})">
+                                <span class="text-gray-700">${option}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                    <div id="feedback-${index}" class="hidden mt-4 p-4 rounded-lg"></div>
+                </div>
+            `).join('');
+        }
+
+        function saveAnswer(questionIndex, answerIndex) {
+            userAnswers[questionIndex] = answerIndex;
+        }
+
+        function submitQuiz() {
+            if (userAnswers.filter(a => a !== undefined).length < questions.length) {
+                alert('⚠️ Veuillez répondre à toutes les questions avant de valider.');
+                return;
+            }
+
+            let score = 0;
+            questions.forEach((q, index) => {
+                const feedbackDiv = document.getElementById(`feedback-${index}`);
+                const isCorrect = userAnswers[index] === q.correct;
+                
+                if (isCorrect) {
+                    score++;
+                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-300';
+                    feedbackDiv.innerHTML = `
+                        <p class="text-green-800 font-semibold">✅ Correct !</p>
+                        <p class="text-green-700 text-sm mt-1">${q.explanation}</p>
+                    `;
+                } else {
+                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300';
+                    feedbackDiv.innerHTML = `
+                        <p class="text-red-800 font-semibold">❌ Incorrect</p>
+                        <p class="text-red-700 text-sm mt-1">La bonne réponse était : <strong>${q.options[q.correct]}</strong></p>
+                        <p class="text-red-700 text-sm mt-1">${q.explanation}</p>
+                    `;
+                }
+                feedbackDiv.classList.remove('hidden');
+            });
+
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage === 100) {
+                message = '🎉 Parfait ! Vous maîtrisez le mode tableau 1 !';
+            } else if (percentage >= 80) {
+                message = '👏 Très bien ! Vous avez compris les concepts essentiels.';
+            } else if (percentage >= 60) {
+                message = '👍 Pas mal ! Revoyez les points manqués.';
+            } else {
+                message = '📚 Revoyez la vidéo pour mieux comprendre le mode tableau.';
+            }
+            
+            document.getElementById('message').textContent = message;
+            document.getElementById('result-container').classList.remove('hidden');
+            document.getElementById('submit-btn').classList.add('hidden');
+            
+            // Envoyer le résultat à Google Sheets
+            envoyerResultatQuiz(nomEtudiant, quizId, score, questions.length, percentage);
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function restartQuiz() {
+            userAnswers = [];
+            document.getElementById('result-container').classList.add('hidden');
+            document.getElementById('submit-btn').classList.remove('hidden');
+            displayQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        displayQuiz();
+    </script>
+</body>
+</html>
