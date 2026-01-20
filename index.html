@@ -25,7 +25,9 @@
         const [syncStatus, setSyncStatus] = useState('');
         const [isConfigured, setIsConfigured] = useState(false);
         const [showImportModal, setShowImportModal] = useState(false);
-        const [students, setStudents] = useState([
+        
+        // Liste par défaut des étudiants
+        const defaultStudents = [
           { id: 1, nom: "Riyad ABKARI", groupe: "TD1" },
           { id: 2, nom: "Adel ALAHYANE", groupe: "TD1" },
           { id: 3, nom: "Tahsan Bin BADAR", groupe: "TD2" },
@@ -83,7 +85,22 @@
           { id: 55, nom: "Mathis VOISENET", groupe: "TD1" },
           { id: 56, nom: "Victor WATTEBLED", groupe: "TD2" },
           { id: 57, nom: "Antoine WEGERA--BESSON", groupe: "TD1" }
-        ]);
+        ];
+        
+        // Charger depuis localStorage ou utiliser la liste par défaut
+        const loadStudentsFromStorage = () => {
+          try {
+            const saved = localStorage.getItem('students_list');
+            if (saved) {
+              return JSON.parse(saved);
+            }
+          } catch (error) {
+            console.error('Erreur chargement localStorage:', error);
+          }
+          return defaultStudents;
+        };
+        
+        const [students, setStudents] = useState(loadStudentsFromStorage());
 
         // Vérifier la configuration au démarrage
         useEffect(() => {
@@ -179,6 +196,12 @@
             
             if (newStudents.length > 0) {
               setStudents(newStudents);
+              // Sauvegarder dans localStorage pour persistance
+              try {
+                localStorage.setItem('students_list', JSON.stringify(newStudents));
+              } catch (error) {
+                console.error('Erreur sauvegarde localStorage:', error);
+              }
               setSyncStatus(`✅ ${newStudents.length} étudiants importés`);
               setShowImportModal(false);
               setTimeout(() => setSyncStatus(''), 3000);
@@ -188,6 +211,16 @@
             }
           };
           reader.readAsText(file);
+        };
+
+        // Fonction pour réinitialiser la liste à la liste par défaut
+        const resetStudentsList = () => {
+          if (confirm('Voulez-vous vraiment réinitialiser la liste des étudiants ? Cela supprimera la liste importée et reviendra à la liste par défaut.')) {
+            setStudents(defaultStudents);
+            localStorage.removeItem('students_list');
+            setSyncStatus('✅ Liste réinitialisée à la liste par défaut');
+            setTimeout(() => setSyncStatus(''), 3000);
+          }
         };
 
         const courseStructure = {
@@ -1040,6 +1073,12 @@ nom,groupe{'\n'}Jean DUPONT,TD1{'\n'}Marie MARTIN,TD2{'\n'}Pierre DURAND,TD1
                         className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2"
                       >
                         📥 Importer CSV
+                      </button>
+                      <button
+                        onClick={resetStudentsList}
+                        className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 flex items-center gap-2"
+                      >
+                        🔄 Réinitialiser liste
                       </button>
                       {isConfigured && (
                         <button
