@@ -3,154 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Fonctions de recherche</title>
+    <title>Quiz - Calculs avec une référence absolue</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Fonctions de recherche (RECHERCHEV)</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Calculs avec une référence absolue</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 2</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
-            
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. À quoi sert la fonction RECHERCHEV ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Une référence absolue dans Excel se note avec :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>À chercher une valeur dans la première colonne d'un tableau et renvoyer une valeur d'une autre colonne</span>
+                        <span>Le signe $ devant la lettre et/ou le chiffre (ex : $A$1)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>À chercher un mot dans une phrase</span>
+                        <span>Le signe # devant la cellule</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>À compter le nombre de cellules</span>
+                        <span>Des parenthèses autour de la cellule</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>À trier un tableau</span>
+                        <span>Le mot ABS devant la cellule</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Dans RECHERCHEV, le "V" signifie :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. À quoi sert une référence absolue ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Vertical (recherche dans une colonne)</span>
+                        <span>À figer une cellule pour qu'elle ne bouge pas lors de la recopie</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Valeur</span>
+                        <span>À protéger la cellule contre la suppression</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Vérifier</span>
+                        <span>À mettre la cellule en gras</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Variable</span>
+                        <span>À créer un lien hypertexte</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Combien d'arguments sont nécessaires dans RECHERCHEV ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Quelle touche permet de basculer entre référence relative et absolue ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>2 arguments</span>
+                        <span>F4</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>3 ou 4 arguments</span>
+                        <span>F2</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>5 arguments</span>
+                        <span>F1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>1 seul argument</span>
+                        <span>Tab</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Le dernier argument de RECHERCHEV (FAUX ou 0) signifie :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Dans la formule =A1*$B$1, que se passe-t-il quand on recopie vers le bas ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Recherche exacte uniquement</span>
+                        <span>A1 devient A2, A3... mais $B$1 reste toujours $B$1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Recherche approximative</span>
+                        <span>Les deux références changent</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Ne rien chercher</span>
+                        <span>Aucune référence ne change</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Trier le tableau</span>
+                        <span>Excel affiche une erreur</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Que renvoie RECHERCHEV si la valeur n'est pas trouvée ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Un cas typique d'utilisation de la référence absolue est :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>#N/A</span>
+                        <span>Appliquer un même taux de TVA à toutes les lignes d'un tableau</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>0</span>
+                        <span>Additionner deux cellules voisines</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>"Non trouvé"</span>
+                        <span>Mettre du texte en gras</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Une cellule vide</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Dans quelle colonne RECHERCHEV cherche-t-elle toujours la valeur ?</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>La première colonne (la plus à gauche) du tableau</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>La dernière colonne</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>N'importe quelle colonne</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>La colonne du milieu</span>
+                        <span>Trier des données</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -160,12 +137,8 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    🔄 Refaire le quiz
-                </button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
-                    ← Retour au suivi
-                </button>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
             </div>
         </div>
     </div>
@@ -176,36 +149,20 @@
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            if (nomFromUrl) {
-                localStorage.setItem('currentStudentName', nomFromUrl);
-                return nomFromUrl;
-            }
+            if (nomFromUrl) { localStorage.setItem('currentStudentName', nomFromUrl); return nomFromUrl; }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
         
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
             if (!GOOGLE_SCRIPT_URL) return;
             try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        type: 'quiz',
-                        nom: nomEtudiant,
-                        quiz: quizId,
-                        score: score,
-                        total: total,
-                        pourcentage: pourcentage
-                    })
+                await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'quiz', nom: nomEtudiant, quiz: quizId, score: score, total: total, pourcentage: pourcentage })
                 });
-                console.log("Résultat du quiz envoyé");
-            } catch (error) {
-                console.error("Erreur:", error);
-            }
+            } catch (error) { console.error("Erreur:", error); }
         }
 
-        const quizId = "N2-V2 RECHERCHEV";
+        const quizId = "N2-V2 Référence absolue";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -216,68 +173,44 @@
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'a',
-            q3: 'b',
-            q4: 'a',
-            q5: 'a',
-            q6: 'a'
-        };
-
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
         const explanations = {
-            q1: 'RECHERCHEV cherche une valeur dans la première colonne d\'un tableau et renvoie une valeur correspondante d\'une autre colonne de la même ligne.',
-            q2: 'Le V signifie Verticale : la fonction cherche verticalement dans une colonne (il existe aussi RECHERCHEH pour horizontal).',
-            q3: 'RECHERCHEV a 4 arguments : valeur cherchée, tableau, numéro de colonne, et type de correspondance (optionnel).',
-            q4: 'FAUX (ou 0) impose une correspondance exacte. VRAI (ou 1) permet une recherche approximative.',
-            q5: 'Si la valeur n\'est pas trouvée, Excel affiche l\'erreur #N/A (Non Applicable).',
-            q6: 'RECHERCHEV cherche TOUJOURS dans la première colonne (la plus à gauche) du tableau spécifié.'
+            q1: 'Le signe $ placé devant la lettre de colonne et/ou le numéro de ligne rend la référence absolue. $A$1 fige la colonne ET la ligne.',
+            q2: 'La référence absolue empêche la cellule de se décaler lors de la recopie d\'une formule (vers le bas, la droite, etc.).',
+            q3: 'La touche F4 permet de basculer entre les 4 modes : A1 → $A$1 → A$1 → $A1 → A1.',
+            q4: 'A1 est une référence relative (elle s\'adapte), $B$1 est absolue (elle reste figée). Donc A1 devient A2 mais $B$1 reste $B$1.',
+            q5: 'Quand on multiplie chaque prix par un même taux de TVA situé dans une cellule fixe, on utilise une référence absolue pour ce taux.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            let score = 0;
-            let totalQuestions = Object.keys(correctAnswers).length;
-            let details = '';
-
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
             for (let question in correctAnswers) {
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
                     details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-
             const percentage = Math.round((score / totalQuestions) * 100);
             const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
             if (percentage >= 80) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez RECHERCHEV !';
-                message.className = 'text-xl mb-6 text-green-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les références absolues !'; message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore avec RECHERCHEV.';
-                message.className = 'text-xl mb-6 text-blue-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                message.textContent = 'Bien ! Pratiquez la recopie avec $ pour bien assimiler.'; message.className = 'text-xl mb-6 text-blue-600';
             } else {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur RECHERCHEV.';
-                message.className = 'text-xl mb-6 text-orange-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les références absolues.'; message.className = 'text-xl mb-6 text-orange-600';
             }
-
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
             envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
-            
             window.scrollTo(0, 0);
         });
     </script>

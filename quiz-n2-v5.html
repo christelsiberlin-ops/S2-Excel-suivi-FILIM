@@ -3,154 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Bases de données et filtres élaborés</title>
+    <title>Quiz - Calculs et conversion d'heure</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Bases de données et filtres élaborés</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Calculs et conversion d'heure</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 5</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
-            
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Dans Excel, une base de données est :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Dans Excel, les heures sont stockées comme :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>Un tableau structuré avec des lignes (enregistrements) et des colonnes (champs)</span>
+                        <span>Une fraction de jour (6h = 0,25 car 6/24)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>Un graphique complexe</span>
+                        <span>Du texte</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Une formule avancée</span>
+                        <span>Un nombre entier de minutes</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>Un fichier Word</span>
+                        <span>Un pourcentage</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Un filtre élaboré permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour calculer une durée entre une heure de début (A1) et une heure de fin (B1) :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Appliquer des critères de filtrage complexes avec plusieurs conditions</span>
+                        <span>=B1-A1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Supprimer définitivement des données</span>
+                        <span>=HEURE(B1-A1)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Créer des graphiques automatiquement</span>
+                        <span>=DUREE(A1;B1)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Modifier la couleur des cellules</span>
+                        <span>=A1+B1</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La fonction BDNB (ou DCOUNT en anglais) permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Pour convertir une durée en heures décimales (ex : 7h30 = 7,5), on multiplie par :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Compter les enregistrements d'une base de données répondant à des critères</span>
+                        <span>24</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Créer une nouvelle base de données</span>
+                        <span>60</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Supprimer des colonnes</span>
+                        <span>100</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Trier alphabétiquement</span>
+                        <span>12</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour supprimer les doublons dans une base de données, on utilise :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Si un total d'heures dépasse 24h et affiche un résultat incorrect, il faut :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Onglet Données > Supprimer les doublons</span>
+                        <span>Utiliser le format [h]:mm (avec les crochets)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Onglet Insertion</span>
+                        <span>Diviser par 2</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Ctrl + D</span>
+                        <span>Ajouter manuellement les heures</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>C'est impossible de dépasser 24h</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. La validation des données permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Pour saisir 8h30 dans une cellule Excel, on tape :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Contrôler le type de données qu'on peut saisir dans une cellule</span>
+                        <span>8:30</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Valider un examen Excel</span>
+                        <span>8h30</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Créer des graphiques</span>
+                        <span>8,30</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Imprimer le document</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Un sous-total dans une base de données permet de :</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Calculer automatiquement des totaux pour chaque groupe de données</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Diviser le tableau en deux</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>Modifier les couleurs</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>Créer un nouveau fichier</span>
+                        <span>830</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -160,12 +137,8 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    🔄 Refaire le quiz
-                </button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
-                    ← Retour au suivi
-                </button>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
             </div>
         </div>
     </div>
@@ -176,36 +149,20 @@
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            if (nomFromUrl) {
-                localStorage.setItem('currentStudentName', nomFromUrl);
-                return nomFromUrl;
-            }
+            if (nomFromUrl) { localStorage.setItem('currentStudentName', nomFromUrl); return nomFromUrl; }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
         
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
             if (!GOOGLE_SCRIPT_URL) return;
             try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        type: 'quiz',
-                        nom: nomEtudiant,
-                        quiz: quizId,
-                        score: score,
-                        total: total,
-                        pourcentage: pourcentage
-                    })
+                await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'quiz', nom: nomEtudiant, quiz: quizId, score: score, total: total, pourcentage: pourcentage })
                 });
-                console.log("Résultat du quiz envoyé");
-            } catch (error) {
-                console.error("Erreur:", error);
-            }
+            } catch (error) { console.error("Erreur:", error); }
         }
 
-        const quizId = "N2-V5 BDD et filtres";
+        const quizId = "N2-V5 Calculs et conversion d'heure";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -216,70 +173,44 @@
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'a',
-            q3: 'a',
-            q4: 'a',
-            q5: 'a',
-            q6: 'a'
-        };
-
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
         const explanations = {
-            q1: 'Une base de données Excel est un tableau organisé où chaque ligne représente un enregistrement et chaque colonne un champ d\'information.',
-            q2: 'Le filtre élaboré (ou filtre avancé) permet d\'appliquer des critères multiples et complexes sur plusieurs colonnes simultanément.',
-            q3: 'BDNB compte le nombre d\'enregistrements dans une base de données qui répondent aux critères spécifiés.',
-            q4: 'L\'outil "Supprimer les doublons" dans l\'onglet Données permet d\'éliminer automatiquement les lignes identiques.',
-            q5: 'La validation des données crée des règles pour limiter ce qu\'on peut saisir (nombres, dates, listes déroulantes, etc.).',
-            q6: 'Les sous-totaux insèrent automatiquement des lignes de calcul (somme, moyenne, etc.) pour chaque groupe de données triées.'
+            q1: 'Excel stocke les heures comme des fractions de jour. 6h = 6/24 = 0,25. 12h = 0,5. 24h = 1.',
+            q2: 'Comme pour les dates, une soustraction entre deux heures donne la durée. Il faut formater le résultat en h:mm.',
+            q3: 'Puisqu\'une heure Excel = 1/24 de jour, on multiplie par 24 pour obtenir des heures décimales (ex : 0,3125 × 24 = 7,5h).',
+            q4: 'Le format standard h:mm repasse à 0 après 24h. Le format [h]:mm (avec crochets) permet d\'afficher plus de 24h (ex : 35:30).',
+            q5: 'Pour saisir une heure dans Excel, on utilise le format heures:minutes avec deux-points (8:30). "8h30" serait interprété comme du texte.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            let score = 0;
-            let totalQuestions = Object.keys(correctAnswers).length;
-            let details = '';
-
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
             for (let question in correctAnswers) {
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
-                
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question] || ''}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question] || 'Réponse incorrecte'}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-
             const percentage = Math.round((score / totalQuestions) * 100);
-
             const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
             if (percentage >= 80) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les bases de données et filtres !';
-                message.className = 'text-xl mb-6 text-green-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les calculs d\'heures !'; message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez avec des bases de données réelles.';
-                message.className = 'text-xl mb-6 text-blue-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                message.textContent = 'Bien ! Pratiquez les conversions d\'heures.'; message.className = 'text-xl mb-6 text-blue-600';
             } else {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les bases de données.';
-                message.className = 'text-xl mb-6 text-orange-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les calculs d\'heures.'; message.className = 'text-xl mb-6 text-orange-600';
             }
-
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
             envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
-            
             window.scrollTo(0, 0);
         });
     </script>

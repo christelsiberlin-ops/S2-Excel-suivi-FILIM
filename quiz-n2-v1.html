@@ -3,154 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Fonctions logiques</title>
+    <title>Quiz - Mise en forme conditionnelle simple</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Fonctions logiques (SI, ET, OU)</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Mise en forme conditionnelle simple</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 1</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
-            
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Quelle formule permet de tester si une valeur en A1 est supérieure à 10 ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. À quoi sert la mise en forme conditionnelle ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>=SI(A1>10;"Oui";"Non")</span>
+                        <span>À modifier automatiquement l'apparence des cellules selon leur valeur</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>=SI(A1<10;"Oui";"Non")</span>
+                        <span>À créer des formules complexes</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>=A1>10</span>
+                        <span>À imprimer le document en couleur</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>=VERIFIER(A1>10)</span>
+                        <span>À protéger les cellules</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. La fonction ET renvoie VRAI si :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Où trouve-t-on la mise en forme conditionnelle dans Excel ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Au moins une condition est vraie</span>
+                        <span>Onglet Accueil > Mise en forme conditionnelle</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Toutes les conditions sont vraies</span>
+                        <span>Onglet Insertion > Styles</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Aucune condition n'est vraie</span>
+                        <span>Onglet Données > Format</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Une seule condition est vraie</span>
+                        <span>Onglet Formules > Conditions</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La fonction OU renvoie VRAI si :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Pour mettre en rouge les cellules contenant des valeurs inférieures à 10, quelle règle utiliser ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Au moins une des conditions est vraie</span>
+                        <span>Règles de mise en surbrillance > Inférieur à</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Toutes les conditions sont vraies obligatoirement</span>
+                        <span>Barres de données</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Aucune condition n'est vraie</span>
+                        <span>Nuances de couleurs</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Exactement deux conditions sont vraies</span>
+                        <span>Jeux d'icônes</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Quelle formule affiche "Admis" si la note (A1) est ≥10 ET l'assiduité (B1) est ≥80% ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Les "barres de données" permettent de :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>=SI(ET(A1>=10;B1>=80);"Admis";"Refusé")</span>
+                        <span>Visualiser les valeurs sous forme de barres horizontales dans les cellules</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>=SI(OU(A1>=10;B1>=80);"Admis";"Refusé")</span>
+                        <span>Créer des graphiques séparés</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>=ET(A1>=10;B1>=80)</span>
+                        <span>Ajouter des bordures aux cellules</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>=SI(A1>=10 ET B1>=80;"Admis";"Refusé")</span>
+                        <span>Modifier la hauteur des lignes</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Dans une fonction SI imbriquée, on peut :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Pour supprimer une mise en forme conditionnelle appliquée :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Mettre une autre fonction SI dans la partie "sinon"</span>
+                        <span>Mise en forme conditionnelle > Effacer les règles</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Utiliser seulement deux conditions maximum</span>
+                        <span>Supprimer la feuille entière</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Additionner des cellules uniquement</span>
+                        <span>Appuyer sur la touche Suppr</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Que renvoie =SI(10>5;"Vrai";"Faux") ?</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Vrai</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Faux</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>#ERREUR</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>10>5</span>
+                        <span>C'est impossible de la supprimer</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -160,12 +137,8 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    🔄 Refaire le quiz
-                </button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
-                    ← Retour au suivi
-                </button>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
             </div>
         </div>
     </div>
@@ -176,44 +149,20 @@
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            
-            if (nomFromUrl) {
-                localStorage.setItem('currentStudentName', nomFromUrl);
-                return nomFromUrl;
-            }
-            
+            if (nomFromUrl) { localStorage.setItem('currentStudentName', nomFromUrl); return nomFromUrl; }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
         
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
-            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
-                console.log("URL Google Script non configurée");
-                return;
-            }
-            
+            if (!GOOGLE_SCRIPT_URL) return;
             try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        type: 'quiz',
-                        nom: nomEtudiant,
-                        quiz: quizId,
-                        score: score,
-                        total: total,
-                        pourcentage: pourcentage
-                    })
+                await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'quiz', nom: nomEtudiant, quiz: quizId, score: score, total: total, pourcentage: pourcentage })
                 });
-                console.log("Résultat du quiz envoyé à Google Sheets");
-            } catch (error) {
-                console.error("Erreur envoi quiz:", error);
-            }
+            } catch (error) { console.error("Erreur:", error); }
         }
 
-        const quizId = "N2-V1 Fonctions logiques";
+        const quizId = "N2-V1 Mise en forme conditionnelle";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -224,70 +173,44 @@
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'b',
-            q3: 'a',
-            q4: 'a',
-            q5: 'a',
-            q6: 'a'
-        };
-
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
         const explanations = {
-            q1: 'La fonction SI teste une condition. Si A1>10 est vrai, elle renvoie "Oui", sinon "Non".',
-            q2: 'La fonction ET exige que TOUTES les conditions soient vraies pour renvoyer VRAI.',
-            q3: 'La fonction OU renvoie VRAI dès qu\'au moins UNE condition est vraie.',
-            q4: 'Pour combiner plusieurs conditions avec "et", on utilise SI(ET(...)) pour que toutes les conditions soient remplies.',
-            q5: 'Les SI imbriqués permettent de tester plusieurs conditions successives en mettant un SI dans la partie "sinon" d\'un autre SI.',
-            q6: 'Comme 10 est bien supérieur à 5, la condition est vraie, donc la formule renvoie "Vrai".'
+            q1: 'La mise en forme conditionnelle change automatiquement la couleur, la police ou le style d\'une cellule en fonction de sa valeur.',
+            q2: 'On trouve la mise en forme conditionnelle dans l\'onglet Accueil, dans le groupe Styles.',
+            q3: 'La règle "Inférieur à" permet de mettre en évidence les valeurs inférieures à un seuil défini.',
+            q4: 'Les barres de données créent une représentation visuelle de la valeur directement dans la cellule, proportionnelle aux autres valeurs.',
+            q5: 'On peut effacer les règles via Mise en forme conditionnelle > Effacer les règles (de la sélection ou de la feuille entière).'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            let score = 0;
-            let totalQuestions = Object.keys(correctAnswers).length;
-            let details = '';
-
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
             for (let question in correctAnswers) {
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
-                
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question] || ''}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question] || 'Réponse incorrecte'}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-
             const percentage = Math.round((score / totalQuestions) * 100);
-
             const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
             if (percentage >= 80) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les fonctions logiques !';
-                message.className = 'text-xl mb-6 text-green-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez la mise en forme conditionnelle !'; message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore avec SI, ET et OU.';
-                message.className = 'text-xl mb-6 text-blue-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                message.textContent = 'Bien ! Pratiquez encore avec différentes règles.'; message.className = 'text-xl mb-6 text-blue-600';
             } else {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les fonctions logiques.';
-                message.className = 'text-xl mb-6 text-orange-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur la mise en forme conditionnelle.'; message.className = 'text-xl mb-6 text-orange-600';
             }
-
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
             envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
-            
             window.scrollTo(0, 0);
         });
     </script>

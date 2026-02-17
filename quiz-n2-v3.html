@@ -3,154 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Tableaux croisés dynamiques</title>
+    <title>Quiz - Calculs de pourcentage</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Tableaux croisés dynamiques</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Calculs de pourcentage</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 3</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
-            
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. À quoi sert un tableau croisé dynamique (TCD) ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Pour calculer un pourcentage dans Excel, la formule de base est :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>À synthétiser et analyser de grandes quantités de données</span>
+                        <span>=Partie/Total (puis formater en %)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>À créer des graphiques uniquement</span>
+                        <span>=POURCENTAGE(Partie;Total)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>À saisir des données</span>
+                        <span>=Total*Partie</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>À imprimer des tableaux</span>
+                        <span>=Partie+Total%</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Où trouve-t-on l'outil pour créer un TCD ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Le format % dans Excel multiplie la valeur affichée par :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Onglet Insertion > Tableau croisé dynamique</span>
+                        <span>100 (0,20 s'affiche 20%)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Onglet Accueil</span>
+                        <span>10</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Onglet Formules</span>
+                        <span>1000</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Ctrl + T</span>
+                        <span>Il ne change rien à la valeur</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Dans un TCD, les zones "Lignes" et "Colonnes" servent à :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Pour calculer un taux de variation entre une ancienne et une nouvelle valeur :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Organiser et catégoriser les données</span>
+                        <span>=(Nouvelle - Ancienne) / Ancienne</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Calculer des sommes uniquement</span>
+                        <span>=Nouvelle / Ancienne</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Colorer les cellules</span>
+                        <span>=Ancienne - Nouvelle</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Supprimer des données</span>
+                        <span>=(Ancienne - Nouvelle) * 100</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. La zone "Valeurs" d'un TCD permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour appliquer le format pourcentage à une cellule, on peut utiliser :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Effectuer des calculs (somme, moyenne, comptage, etc.)</span>
+                        <span>Le bouton % dans l'onglet Accueil ou le raccourci Ctrl+Maj+%</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Trier les données alphabétiquement</span>
+                        <span>L'onglet Insertion > Pourcentage</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Changer la couleur du tableau</span>
+                        <span>Taper le signe % après le nombre</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Créer des formules SI</span>
+                        <span>C'est automatique</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Les segments (slicers) dans un TCD permettent de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Si une cellule contient 0,25 et qu'on applique le format %, elle affichera :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Filtrer les données visuellement et facilement</span>
+                        <span>25%</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Découper physiquement le tableau</span>
+                        <span>0,25%</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Supprimer des colonnes</span>
+                        <span>2500%</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Calculer des moyennes</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Un TCD est "dynamique" car :</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Il se met à jour quand on actualise et on peut facilement réorganiser les champs</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Il bouge tout seul à l'écran</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>Il change de couleur automatiquement</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>Il est animé</span>
+                        <span>25</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -160,12 +137,8 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    🔄 Refaire le quiz
-                </button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
-                    ← Retour au suivi
-                </button>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
             </div>
         </div>
     </div>
@@ -176,36 +149,20 @@
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            if (nomFromUrl) {
-                localStorage.setItem('currentStudentName', nomFromUrl);
-                return nomFromUrl;
-            }
+            if (nomFromUrl) { localStorage.setItem('currentStudentName', nomFromUrl); return nomFromUrl; }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
         
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
             if (!GOOGLE_SCRIPT_URL) return;
             try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        type: 'quiz',
-                        nom: nomEtudiant,
-                        quiz: quizId,
-                        score: score,
-                        total: total,
-                        pourcentage: pourcentage
-                    })
+                await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'quiz', nom: nomEtudiant, quiz: quizId, score: score, total: total, pourcentage: pourcentage })
                 });
-                console.log("Résultat du quiz envoyé");
-            } catch (error) {
-                console.error("Erreur:", error);
-            }
+            } catch (error) { console.error("Erreur:", error); }
         }
 
-        const quizId = "N2-V3 TCD";
+        const quizId = "N2-V3 Calculs de pourcentage";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -216,68 +173,44 @@
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'a',
-            q3: 'a',
-            q4: 'a',
-            q5: 'a',
-            q6: 'a'
-        };
-
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
         const explanations = {
-            q1: 'Les TCD sont parfaits pour résumer, analyser et présenter de grandes quantités de données de manière claire.',
-            q2: 'On crée un tableau croisé dynamique via l\'onglet Insertion > Tableau croisé dynamique.',
-            q3: 'Les zones Lignes et Colonnes permettent de croiser et d\'organiser les données selon différentes dimensions.',
-            q4: 'La zone Valeurs contient les champs numériques sur lesquels on effectue des calculs : somme, moyenne, comptage, min, max, etc.',
-            q5: 'Les segments sont des boutons de filtrage visuels qui rendent le filtrage interactif et intuitif.',
-            q6: 'Un TCD est dynamique car il peut être actualisé avec de nouvelles données et on peut facilement déplacer les champs pour changer l\'analyse.'
+            q1: 'Le pourcentage se calcule en divisant la partie par le total. On applique ensuite le format % pour l\'affichage.',
+            q2: 'Le format % multiplie l\'affichage par 100 : une valeur de 0,20 sera affichée 20%. La valeur réelle reste 0,20.',
+            q3: 'Le taux de variation = (Nouvelle valeur - Ancienne valeur) / Ancienne valeur. Un résultat positif = hausse, négatif = baisse.',
+            q4: 'Le bouton % se trouve dans l\'onglet Accueil, groupe Nombre. Le raccourci clavier est Ctrl+Maj+%.',
+            q5: '0,25 × 100 = 25, donc la cellule affichera 25%. Le format % multiplie toujours l\'affichage par 100.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            let score = 0;
-            let totalQuestions = Object.keys(correctAnswers).length;
-            let details = '';
-
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
             for (let question in correctAnswers) {
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
                     details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-
             const percentage = Math.round((score / totalQuestions) * 100);
             const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
             if (percentage >= 80) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les tableaux croisés dynamiques !';
-                message.className = 'text-xl mb-6 text-green-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les calculs de pourcentage !'; message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore avec les TCD.';
-                message.className = 'text-xl mb-6 text-blue-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                message.textContent = 'Bien ! Pratiquez encore les pourcentages.'; message.className = 'text-xl mb-6 text-blue-600';
             } else {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les tableaux croisés dynamiques.';
-                message.className = 'text-xl mb-6 text-orange-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les calculs de pourcentage.'; message.className = 'text-xl mb-6 text-orange-600';
             }
-
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
             envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
-            
             window.scrollTo(0, 0);
         });
     </script>

@@ -3,154 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Graphiques avancés</title>
+    <title>Quiz - Calculs de date</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Graphiques avancés</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Calculs de date</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 4</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
-            
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Un graphique combiné permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Dans Excel, une date est en réalité stockée sous forme de :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>Afficher plusieurs types de graphiques dans le même visuel (ex: colonnes + courbe)</span>
+                        <span>Un nombre (numéro de série)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>Additionner deux graphiques</span>
+                        <span>Du texte</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Fusionner deux tableaux</span>
+                        <span>Une image</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>Créer des formules complexes</span>
+                        <span>Une formule</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Un axe secondaire dans un graphique sert à :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour calculer le nombre de jours entre deux dates, on peut :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Afficher des séries de données avec des échelles très différentes</span>
+                        <span>Faire une simple soustraction entre les deux dates</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Dupliquer le graphique</span>
+                        <span>Utiliser la fonction SOMME</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Changer la couleur du graphique</span>
+                        <span>Compter manuellement sur un calendrier</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Imprimer le graphique deux fois</span>
+                        <span>C'est impossible dans Excel</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Un graphique en cascade (waterfall) est utile pour :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Pour ajouter 30 jours à une date en A1 :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Visualiser l'effet cumulatif de valeurs positives et négatives</span>
+                        <span>=A1+30</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Afficher des pourcentages uniquement</span>
+                        <span>=AJOUTER(A1;30)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Créer des animations</span>
+                        <span>=DATE(A1+30)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Faire des calculs automatiques</span>
+                        <span>=A1&30</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Les courbes de tendance permettent de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Si le résultat d'un calcul de date affiche un nombre (ex : 45678) au lieu d'une date, il faut :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Visualiser et prévoir la direction générale des données</span>
+                        <span>Changer le format de la cellule en format Date</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Modifier les données sources</span>
+                        <span>Refaire le calcul</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Supprimer des valeurs</span>
+                        <span>Supprimer la cellule et recommencer</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Changer le type de graphique</span>
+                        <span>C'est une erreur de calcul</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Les étiquettes de données sur un graphique servent à :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. La fonction AUJOURDHUI() renvoie :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Afficher les valeurs exactes directement sur le graphique</span>
+                        <span>La date du jour actuel, qui se met à jour automatiquement</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Nommer le graphique</span>
+                        <span>La date de création du fichier</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Créer une légende</span>
+                        <span>L'heure actuelle</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Imprimer le graphique</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Un graphique en nuage de points est particulièrement adapté pour :</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Montrer la corrélation entre deux variables</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Afficher des pourcentages</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>Comparer des catégories</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>Créer des tableaux</span>
+                        <span>Une date fixe choisie par l'utilisateur</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -160,12 +137,8 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    🔄 Refaire le quiz
-                </button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
-                    ← Retour au suivi
-                </button>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
             </div>
         </div>
     </div>
@@ -176,36 +149,20 @@
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            if (nomFromUrl) {
-                localStorage.setItem('currentStudentName', nomFromUrl);
-                return nomFromUrl;
-            }
+            if (nomFromUrl) { localStorage.setItem('currentStudentName', nomFromUrl); return nomFromUrl; }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
         
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
             if (!GOOGLE_SCRIPT_URL) return;
             try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        type: 'quiz',
-                        nom: nomEtudiant,
-                        quiz: quizId,
-                        score: score,
-                        total: total,
-                        pourcentage: pourcentage
-                    })
+                await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'quiz', nom: nomEtudiant, quiz: quizId, score: score, total: total, pourcentage: pourcentage })
                 });
-                console.log("Résultat du quiz envoyé");
-            } catch (error) {
-                console.error("Erreur:", error);
-            }
+            } catch (error) { console.error("Erreur:", error); }
         }
 
-        const quizId = "N2-V4 Graphiques avancés";
+        const quizId = "N2-V4 Calculs de date";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -216,70 +173,44 @@
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = {
-            q1: 'a',
-            q2: 'a',
-            q3: 'a',
-            q4: 'a',
-            q5: 'a',
-            q6: 'a'
-        };
-
+        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
         const explanations = {
-            q1: 'Un graphique combiné permet de superposer différents types de graphiques, par exemple des colonnes pour les ventes et une courbe pour les objectifs.',
-            q2: 'Un axe secondaire permet d\'afficher des données avec des échelles très différentes (ex: chiffre d\'affaires en milliers et taux en pourcentage).',
-            q3: 'Le graphique en cascade montre comment une valeur initiale est affectée par des augmentations et diminutions successives.',
-            q4: 'Les courbes de tendance ajoutent une ligne qui montre la direction générale des données et peuvent aider à faire des prévisions.',
-            q5: 'Les étiquettes de données affichent les valeurs numériques précises directement sur les barres, points ou secteurs du graphique.',
-            q6: 'Le nuage de points permet de voir s\'il existe une relation (corrélation) entre deux variables, par exemple le prix et la demande.'
+            q1: 'Excel stocke les dates comme des numéros de série (1 = 1er janvier 1900). C\'est ce qui permet de faire des calculs dessus.',
+            q2: 'Puisque les dates sont des nombres, une simple soustraction donne le nombre de jours entre deux dates.',
+            q3: 'Comme les dates sont des nombres, =A1+30 ajoute simplement 30 jours à la date contenue en A1.',
+            q4: 'Le nombre affiché EST la date (son numéro de série). Il suffit de formater la cellule en Date pour voir la date correctement.',
+            q5: 'AUJOURDHUI() renvoie la date système du jour. Elle se recalcule à chaque ouverture du fichier.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            let score = 0;
-            let totalQuestions = Object.keys(correctAnswers).length;
-            let details = '';
-
+            let score = 0, totalQuestions = Object.keys(correctAnswers).length, details = '';
             for (let question in correctAnswers) {
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
-                
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question] || ''}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question] || 'Réponse incorrecte'}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-
             const percentage = Math.round((score / totalQuestions) * 100);
-
             const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
             if (percentage >= 80) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les graphiques avancés !';
-                message.className = 'text-xl mb-6 text-green-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les calculs de date !'; message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Explorez d\'autres types de graphiques avancés.';
-                message.className = 'text-xl mb-6 text-blue-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
+                message.textContent = 'Bien ! Entraînez-vous avec des calculs de dates.'; message.className = 'text-xl mb-6 text-blue-600';
             } else {
-                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
-                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les graphiques avancés.';
-                message.className = 'text-xl mb-6 text-orange-600';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`; scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les calculs de date.'; message.className = 'text-xl mb-6 text-orange-600';
             }
-
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
             envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
-            
             window.scrollTo(0, 0);
         });
     </script>
