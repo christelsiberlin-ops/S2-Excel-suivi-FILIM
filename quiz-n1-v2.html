@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Saisie et mise en forme</title>
+    <title>Quiz - Faire des opérations</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Saisie et mise en forme des données</h1>
+            <h1 class="text-2xl font-bold text-blue-900 mb-2">Quiz - Faire des opérations</h1>
             <p class="text-gray-600">Niveau 1 - Vidéo 2</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
@@ -17,140 +17,118 @@
         <form id="quizForm" class="space-y-6">
             
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Pour valider la saisie dans une cellule, on peut appuyer sur :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Toute formule dans Excel commence par :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>La touche Entrée</span>
+                        <span>Le signe = (égal)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>La touche Tab</span>
+                        <span>Le signe + (plus)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Les touches fléchées</span>
+                        <span>Le mot FORMULE</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>Toutes ces réponses sont correctes</span>
+                        <span>Une parenthèse (</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour mettre du texte en gras, on utilise :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Quel est l'opérateur de multiplication dans Excel ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Ctrl + B</span>
+                        <span>x</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Ctrl + G</span>
+                        <span>* (astérisque)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Ctrl + I</span>
+                        <span>× (signe multiplier)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Ctrl + U</span>
+                        <span>. (point)</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Comment fusionner plusieurs cellules en une seule ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La formule =A1+B1 permet de :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Sélectionner les cellules puis utiliser "Fusionner et centrer"</span>
+                        <span>Additionner le contenu des cellules A1 et B1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Copier-coller les cellules</span>
+                        <span>Fusionner les cellules A1 et B1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Supprimer les bordures</span>
+                        <span>Comparer les cellules A1 et B1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Augmenter la taille de la cellule</span>
+                        <span>Copier A1 dans B1</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour modifier la largeur d'une colonne, on peut :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. La fonction SOMME permet de :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Double-cliquer entre deux en-têtes de colonnes</span>
+                        <span>Additionner une plage de cellules en une seule formule</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Faire glisser la bordure entre deux en-têtes de colonnes</span>
+                        <span>Calculer la moyenne</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Clic droit sur l'en-têt puis "Largeur de colonne"</span>
+                        <span>Compter le nombre de cellules</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Toutes ces méthodes fonctionnent</span>
+                        <span>Trier les données</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Pour aligner du texte au centre d'une cellule, on utilise :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. L'avantage d'utiliser des références de cellules (ex : =A1*B1) plutôt que des valeurs fixes (ex : =5*3) est :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Les boutons d'alignement dans l'onglet Accueil</span>
+                        <span>Le résultat se met à jour automatiquement si les données changent</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>La touche Espace plusieurs fois</span>
+                        <span>Le calcul est plus rapide</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Ctrl + E</span>
+                        <span>Il n'y a aucune différence</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>La touche Tab</span>
+                        <span>Les cellules changent de couleur</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Quelle combinaison de touches permet de copier une cellule ?</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Ctrl + C</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Ctrl + V</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>Ctrl + X</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>Ctrl + Z</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -205,7 +183,7 @@
             }
         }
 
-        const quizId = "N1-V2 Saisie et mise en forme";
+        const quizId = "N1-V2 Faire des opérations";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -217,21 +195,19 @@
         }
 
         const correctAnswers = {
-            q1: 'd',
-            q2: 'a',
+            q1: 'a',
+            q2: 'b',
             q3: 'a',
-            q4: 'd',
-            q5: 'a',
-            q6: 'a'
+            q4: 'a',
+            q5: 'a'
         };
 
         const explanations = {
-            q1: 'Entrée, Tab et les flèches permettent toutes de valider la saisie et de se déplacer dans différentes directions.',
-            q2: 'Ctrl + B met en gras (Bold en anglais). Ctrl + I met en italique et Ctrl + U souligne.',
-            q3: 'La fonction "Fusionner et centrer" permet de regrouper plusieurs cellules en une seule.',
-            q4: 'Excel offre plusieurs méthodes pour ajuster la largeur : double-clic pour ajustement automatique, glisser-déposer, ou menu contextuel.',
-            q5: 'Les boutons d\'alignement dans l\'onglet Accueil permettent d\'aligner à gauche, au centre ou à droite.',
-            q6: 'Ctrl + C pour Copier, Ctrl + V pour coller (Paste), Ctrl + X pour couper.'
+            q1: 'Toute formule dans Excel doit obligatoirement commencer par le signe = pour indiquer à Excel qu\'il s\'agit d\'un calcul.',
+            q2: 'L\'astérisque * est l\'opérateur de multiplication dans Excel. Le / est utilisé pour la division.',
+            q3: 'La formule =A1+B1 additionne les valeurs contenues dans les cellules A1 et B1.',
+            q4: 'La fonction SOMME (ex : =SOMME(A1:A10)) additionne toutes les valeurs d\'une plage de cellules.',
+            q5: 'En utilisant des références de cellules, le résultat de la formule se recalcule automatiquement dès que les données sources sont modifiées.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
@@ -245,7 +221,7 @@
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
                     details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
@@ -258,17 +234,17 @@
             if (percentage >= 80) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez la saisie et la mise en forme !';
+                message.textContent = 'Excellent ! Vous maîtrisez les opérations de base !';
                 message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore un peu.';
+                message.textContent = 'Bien ! Entraînez-vous encore avec les formules.';
                 message.className = 'text-xl mb-6 text-blue-600';
             } else {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur la saisie et la mise en forme.';
+                message.textContent = 'Revoyez la vidéo sur les opérations.';
                 message.className = 'text-xl mb-6 text-orange-600';
             }
 

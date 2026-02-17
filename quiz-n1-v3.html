@@ -3,154 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Formules simples</title>
+    <title>Quiz - Graphique simple - histogramme</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Formules simples</h1>
-            <p class="text-gray-600">Niveau 1 - Vidéo 3 : SOMME, MOYENNE, MIN, MAX</p>
+            <h1 class="text-2xl font-bold text-blue-900 mb-2">Quiz - Graphique simple : histogramme</h1>
+            <p class="text-gray-600">Niveau 1 - Vidéo 3</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
             
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Quelle formule permet de calculer la somme des cellules A1 à A10 ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Un histogramme est un graphique qui représente les données sous forme de :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>=SOMME(A1:A10)</span>
+                        <span>Barres verticales</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>=SUM(A1-A10)</span>
+                        <span>Lignes courbes</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>=TOTAL(A1;A10)</span>
+                        <span>Parts de camembert</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>=ADDITION(A1:A10)</span>
+                        <span>Nuages de points</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Comment calculer la moyenne des notes en cellules B2 à B20 ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour créer un graphique dans Excel, on doit d'abord :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>=MOY(B2:B20)</span>
+                        <span>Sélectionner les données à représenter</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>=MOYENNE(B2:B20)</span>
+                        <span>Ouvrir un nouveau classeur</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>=AVG(B2:B20)</span>
+                        <span>Trier les données</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>=MEAN(B2:B20)</span>
+                        <span>Imprimer le tableau</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Quelle fonction permet de trouver la valeur la plus petite dans une plage ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Les graphiques se trouvent dans quel onglet du ruban ?</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>=MINIMUM()</span>
+                        <span>Onglet Insertion</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>=MIN()</span>
+                        <span>Onglet Accueil</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>=PETIT()</span>
+                        <span>Onglet Données</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>=PLUS_PETIT()</span>
+                        <span>Onglet Formules</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Si j'écris =MAX(C1:C5) dans une cellule, qu'est-ce que cela calcule ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Un histogramme est particulièrement adapté pour :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>La somme des cellules C1 à C5</span>
+                        <span>Comparer des valeurs entre différentes catégories</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>La valeur la plus grande parmi C1 à C5</span>
+                        <span>Montrer des proportions d'un tout</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>La moyenne des cellules C1 à C5</span>
+                        <span>Afficher une évolution dans le temps uniquement</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Le nombre de cellules entre C1 et C5</span>
+                        <span>Calculer des moyennes</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Dans la formule =SOMME(A1:A5), que représente le symbole ":" ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Pour modifier le titre d'un graphique, on peut :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Une division</span>
+                        <span>Cliquer directement sur le titre dans le graphique et le modifier</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Une plage de cellules continues (de A1 jusqu'à A5)</span>
+                        <span>Supprimer le graphique et en recréer un</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Une multiplication</span>
+                        <span>Modifier la cellule A1</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Une soustraction</span>
+                        <span>C'est impossible de changer le titre</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. Je veux calculer la moyenne de 15, 20 et 25. Quelle formule est correcte ?</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>=MOYENNE(15,20,25)</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>=MOY(15;20;25)</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>=(15+20+25)/3</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>=MOYENNE(15,20,25) ET =(15+20+25)/3 sont toutes deux correctes</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -205,7 +183,7 @@
             }
         }
 
-        const quizId = "N1-V3 Formules simples";
+        const quizId = "N1-V3 Graphique histogramme";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -218,20 +196,18 @@
 
         const correctAnswers = {
             q1: 'a',
-            q2: 'b',
-            q3: 'b',
-            q4: 'b',
-            q5: 'b',
-            q6: 'd'
+            q2: 'a',
+            q3: 'a',
+            q4: 'a',
+            q5: 'a'
         };
 
         const explanations = {
-            q1: 'En français, Excel utilise =SOMME() et non =SUM(). Le symbole : définit une plage continue.',
-            q2: 'En français, la fonction s\'appelle =MOYENNE() et non =MOY() ou =AVG().',
-            q3: 'La fonction MIN() trouve la valeur minimale dans une plage de cellules.',
-            q4: 'MAX() retourne la valeur maximale (la plus grande) d\'une plage de cellules.',
-            q5: 'Le symbole : (deux-points) indique une plage continue de cellules, de la première à la dernière.',
-            q6: 'Les deux formules donnent le même résultat : 20. =MOYENNE() est plus pratique, mais le calcul manuel fonctionne aussi !'
+            q1: 'Un histogramme représente les données sous forme de barres verticales. La hauteur de chaque barre correspond à la valeur.',
+            q2: 'Avant d\'insérer un graphique, il faut sélectionner les données (y compris les étiquettes) que l\'on souhaite représenter.',
+            q3: 'Les outils de création de graphiques se trouvent dans l\'onglet Insertion, groupe Graphiques.',
+            q4: 'L\'histogramme est idéal pour comparer visuellement des valeurs entre différentes catégories (ex : ventes par mois, notes par matière).',
+            q5: 'On peut cliquer directement sur le titre du graphique pour le sélectionner et le modifier. On peut aussi utiliser les outils de graphique.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
@@ -245,7 +221,7 @@
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
                     details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
@@ -258,17 +234,17 @@
             if (percentage >= 80) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les formules simples !';
+                message.textContent = 'Excellent ! Vous maîtrisez l\'histogramme !';
                 message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Revoyez la vidéo et réessayez.';
+                message.textContent = 'Bien ! Pratiquez la création d\'histogrammes.';
                 message.className = 'text-xl mb-6 text-blue-600';
             } else {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez attentivement la vidéo sur les formules simples.';
+                message.textContent = 'Revoyez la vidéo sur les histogrammes.';
                 message.className = 'text-xl mb-6 text-orange-600';
             }
 

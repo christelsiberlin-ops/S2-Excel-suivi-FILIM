@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Filtres et tris basiques</title>
+    <title>Quiz - Introduction aux bases de données</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Filtres et tris basiques</h1>
+            <h1 class="text-2xl font-bold text-blue-900 mb-2">Quiz - Introduction aux bases de données</h1>
             <p class="text-gray-600">Niveau 1 - Vidéo 6</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
@@ -17,140 +17,118 @@
         <form id="quizForm" class="space-y-6">
             
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. À quoi sert un filtre dans Excel ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Dans une base de données Excel, chaque ligne représente :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>À afficher uniquement les lignes qui répondent à certains critères</span>
+                        <span>Un enregistrement (une fiche)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>À supprimer définitivement des données</span>
+                        <span>Un champ</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>À créer des graphiques</span>
+                        <span>Un titre</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="d" class="w-4 h-4">
-                        <span>À calculer des moyennes</span>
+                        <span>Une formule</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Comment activer les filtres automatiques sur un tableau ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Dans une base de données Excel, chaque colonne représente :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Onglet Données > Filtrer</span>
+                        <span>Un champ (une catégorie d'information)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Onglet Insertion > Filtrer</span>
+                        <span>Un enregistrement</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Onglet Accueil > Filtrer</span>
+                        <span>Un graphique</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="d" class="w-4 h-4">
-                        <span>Ctrl + F</span>
+                        <span>Un fichier</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Quand les filtres sont activés, que voit-on dans les en-têtes de colonnes ?</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La première ligne d'une base de données contient généralement :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Des petites flèches déroulantes</span>
+                        <span>Les en-têtes (noms des champs)</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Des croix rouges</span>
+                        <span>Les totaux</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Des étoiles jaunes</span>
+                        <span>Le premier enregistrement</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="d" class="w-4 h-4">
-                        <span>Rien de particulier</span>
+                        <span>Des formules</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour trier un tableau du plus petit au plus grand, on utilise :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour qu'une base de données fonctionne correctement dans Excel, il faut :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Trier de A à Z ou du plus petit au plus grand</span>
+                        <span>Qu'il n'y ait pas de lignes ou colonnes vides dans les données</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Trier de Z à A</span>
+                        <span>Que toutes les cellules soient colorées</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Filtrer par couleur</span>
+                        <span>Que chaque cellule contienne une formule</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="d" class="w-4 h-4">
-                        <span>Supprimer les doublons</span>
+                        <span>Que les données soient sur plusieurs feuilles</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Les données masquées par un filtre sont :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Un exemple de base de données dans Excel serait :</h3>
                 <div class="space-y-3">
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Temporairement cachées, mais toujours présentes</span>
+                        <span>Une liste de clients avec nom, prénom, ville et téléphone</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Supprimées définitivement</span>
+                        <span>Un graphique en barres</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Déplacées dans une autre feuille</span>
+                        <span>Une lettre rédigée dans Excel</span>
                     </label>
                     <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="d" class="w-4 h-4">
-                        <span>Transformées en graphique</span>
+                        <span>Un calcul de moyenne</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">6. On peut trier un tableau selon :</h3>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="a" class="w-4 h-4">
-                        <span>Une seule colonne à la fois</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="b" class="w-4 h-4">
-                        <span>Plusieurs colonnes en définissant des niveaux de tri</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="c" class="w-4 h-4">
-                        <span>Par couleur uniquement</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="radio" name="q6" value="d" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
-                    ✓ Valider mes réponses
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                    ✔ Valider mes réponses
                 </button>
             </div>
         </form>
@@ -205,7 +183,7 @@
             }
         }
 
-        const quizId = "N1-V6 Filtres et tris";
+        const quizId = "N1-V6 Introduction bases de données";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
@@ -221,17 +199,15 @@
             q2: 'a',
             q3: 'a',
             q4: 'a',
-            q5: 'a',
-            q6: 'b'
+            q5: 'a'
         };
 
         const explanations = {
-            q1: 'Les filtres permettent de masquer temporairement les lignes qui ne correspondent pas aux critères choisis, sans supprimer les données.',
-            q2: 'Pour activer les filtres automatiques, il faut aller dans l\'onglet Données puis cliquer sur le bouton Filtrer.',
-            q3: 'Quand les filtres sont activés, des petites flèches déroulantes apparaissent dans chaque en-tête de colonne.',
-            q4: 'Le tri croissant (A à Z, du plus petit au plus grand) organise les données en ordre ascendant.',
-            q5: 'Important : les filtres masquent temporairement les données sans les supprimer. On peut les réafficher à tout moment.',
-            q6: 'Excel permet de trier selon plusieurs colonnes à la fois en utilisant la fonction "Tri personnalisé" avec des niveaux de tri.'
+            q1: 'Chaque ligne d\'une base de données représente un enregistrement, c\'est-à-dire une fiche complète (ex : un client, un produit, un employé).',
+            q2: 'Chaque colonne représente un champ, c\'est-à-dire un type d\'information (ex : Nom, Prénom, Ville, Téléphone).',
+            q3: 'La première ligne contient les en-têtes qui nomment chaque champ. Ces en-têtes sont indispensables pour le tri et le filtrage.',
+            q4: 'Une base de données doit être continue, sans lignes ni colonnes vides, pour que les outils de tri, filtre et fonctions fonctionnent correctement.',
+            q5: 'Une base de données est un tableau structuré avec des en-têtes et des enregistrements homogènes, comme une liste de clients.'
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
@@ -245,7 +221,7 @@
                 const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
                 if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
                     details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
@@ -258,17 +234,17 @@
             if (percentage >= 80) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Vous maîtrisez les filtres et les tris !';
+                message.textContent = 'Excellent ! Vous maîtrisez les bases de données Excel !';
                 message.className = 'text-xl mb-6 text-green-600';
             } else if (percentage >= 60) {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez avec différents filtres et tris.';
+                message.textContent = 'Bien ! Revoyez la structure d\'une base de données.';
                 message.className = 'text-xl mb-6 text-blue-600';
             } else {
                 scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
                 scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les filtres et les tris.';
+                message.textContent = 'Revoyez la vidéo sur les bases de données.';
                 message.className = 'text-xl mb-6 text-orange-600';
             }
 
