@@ -15,98 +15,121 @@
         </div>
 
         <form id="quizForm" class="space-y-6">
+
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Nommer une cellule ou plage permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Quel est le principal avantage de nommer une cellule ou une plage dans Excel ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>Utiliser un nom explicite au lieu d'une référence (A1, B2...)</span>
+                        <span>Cela permet de protéger les cellules nommées contre toute modification</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>Protéger les cellules</span>
+                        <span>Les formules deviennent plus lisibles et les noms fonctionnent comme des références absolues</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Créer des graphiques</span>
+                        <span>Les cellules nommées sont automatiquement mises en couleur</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4">
+                        <span>Cela accélère le calcul des formules dans le classeur</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour nommer une plage :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Comment nommer rapidement une cellule ou une plage sélectionnée ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Sélectionner la plage, puis utiliser la zone de nom ou Formules > Définir un nom</span>
+                        <span>Onglet Accueil &gt; Nommer la cellule</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>Cliquer dans la Zone Nom (à gauche de la barre de formule) et taper le nom souhaité, puis valider avec Entrée</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Ctrl + N</span>
+                        <span>Faire un clic droit sur la cellule &gt; Propriétés &gt; Nom</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4">
+                        <span>Onglet Révision &gt; Nouveau nom</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Un nom de plage peut contenir :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Quelle règle s'applique aux noms de plages dans Excel ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Lettres, chiffres, underscore (_) mais pas d'espaces</span>
+                        <span>Les noms peuvent contenir des espaces et des caractères spéciaux</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>N'importe quel caractère</span>
+                        <span>Les noms doivent commencer par une lettre ou un underscore (_), sans espace ni opérateur</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Uniquement des lettres</span>
+                        <span>Les noms sont limités à 5 caractères maximum</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4">
+                        <span>Les noms doivent être en majuscules uniquement</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Exemple d'utilisation avec un nom :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Si vous nommez la plage B2:B12 "VentesNord", comment l'utiliser dans une formule ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>=SOMME(Ventes) au lieu de =SOMME(A1:A10)</span>
+                        <span>=SOMME("VentesNord")</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>=SOMME("Ventes")</span>
+                        <span>=SOMME(VentesNord)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>=SOMME([VentesNord])</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4">
+                        <span>=SOMME(NOM:VentesNord)</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Avantage des noms de plages :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Où peut-on gérer (modifier, supprimer) tous les noms définis dans un classeur ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Formules plus lisibles et compréhensibles</span>
+                        <span>Onglet Données &gt; Gestionnaire de noms</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Calculs plus rapides</span>
+                        <span>Onglet Formules &gt; Gestionnaire de noms</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Aucun avantage</span>
+                        <span>Onglet Révision &gt; Gérer les noms</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4">
+                        <span>Onglet Affichage &gt; Noms de cellules</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">✓ Valider mes réponses</button>
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    ✔ Valider mes réponses
+                </button>
             </div>
         </form>
 
@@ -115,43 +138,36 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
+                <button onclick="location.reload()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    🔄 Refaire le quiz
+                </button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
+                    ← Retour au suivi
+                </button>
             </div>
         </div>
     </div>
 
     <script>
-        // ⚠️ REMPLACEZ PAR VOTRE URL GOOGLE SCRIPT
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
-        
-        // Récupérer le nom de l'étudiant depuis l'URL ou localStorage
+
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            
             if (nomFromUrl) {
                 localStorage.setItem('currentStudentName', nomFromUrl);
                 return nomFromUrl;
             }
-            
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
-        
-        // Envoyer le résultat du quiz à Google Sheets
+
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
-            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
-                console.log("URL Google Script non configurée");
-                return;
-            }
-            
+            if (!GOOGLE_SCRIPT_URL) return;
             try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         type: 'quiz',
                         nom: nomEtudiant,
@@ -161,76 +177,76 @@
                         pourcentage: pourcentage
                     })
                 });
-                console.log("Résultat du quiz envoyé à Google Sheets");
+                console.log("Résultat du quiz envoyé");
             } catch (error) {
-                console.error("Erreur envoi quiz:", error);
+                console.error("Erreur:", error);
             }
         }
 
-        // Identifier le quiz
         const quizId = "N2-V14 Cellules et plages nommées";
         const nomEtudiant = getNomEtudiant();
 
-        // Afficher le nom dans le header
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
         if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
             const nameTag = document.createElement('p');
-            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2';
+            nameTag.className = 'text-sm text-purple-600 font-medium mt-2';
             nameTag.textContent = '👤 ' + nomEtudiant;
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
+        const correctAnswers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b' };
+
         const explanations = {
-            q1: 'Nommer une plage permet d\'utiliser "Total_Ventes" au lieu de "C12:C50" dans les formules.',
-            q2: 'Soit via la zone de nom (à gauche de la barre de formule), soit Formules > Définir un nom.',
-            q3: 'Pas d\'espaces ! Utilisez underscore : "Total_Ventes" ou "TotalVentes" mais pas "Total Ventes".',
-            q4: '=SOMME(Ventes) est beaucoup plus clair que =SOMME($A$1:$A$10) !',
-            q5: 'Les formules deviennent auto-documentées et faciles à comprendre, même des mois plus tard.'
+            q1: "Nommer des cellules/plages offre deux avantages majeurs : les formules deviennent plus lisibles (=SOMME(VentesNord) au lieu de =SOMME(B2:B12)) et les noms se comportent comme des références absolues (pas besoin du signe $).",
+            q2: "La méthode la plus rapide est d'utiliser la Zone Nom, à gauche de la barre de formule. Sélectionnez la plage, cliquez dans la Zone Nom, tapez le nom et validez avec Entrée. On peut aussi passer par Formules > Définir un nom.",
+            q3: "Les noms doivent commencer par une lettre ou un underscore (_), ne peuvent pas contenir d'espaces (utiliser _ à la place), ni d'opérateurs, et ne doivent pas ressembler à des références de cellules (ex: A1 est interdit).",
+            q4: "Pour utiliser un nom dans une formule, on l'écrit directement sans guillemets : =SOMME(VentesNord). Excel reconnaît automatiquement les noms définis. On peut aussi commencer à taper le nom et utiliser l'autocomplétion.",
+            q5: "Le Gestionnaire de noms se trouve dans l'onglet Formules > groupe Noms définis > Gestionnaire de noms. Il permet de voir, créer, modifier et supprimer tous les noms définis dans le classeur."
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            let score = 0, total = Object.keys(correctAnswers).length, details = '';
-            
-            for (let q in correctAnswers) {
-                const ans = document.querySelector(`input[name="${q}"]:checked`);
-                if (ans && ans.value === correctAnswers[q]) {
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let details = '';
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-            
-            const pct = Math.round((score / total) * 100);
-            const disp = document.getElementById('scoreDisplay');
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
-            if (pct >= 80) {
-                disp.textContent = `${score}/${total} 🎉`;
-                disp.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! Plages nommées maîtrisées !';
+
+            if (percentage >= 80) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les plages nommées !';
                 message.className = 'text-xl mb-6 text-green-600';
-            } else if (pct >= 60) {
-                disp.textContent = `${score}/${total} 👍`;
-                disp.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore.';
-                message.className = 'text-xl mb-6 text-blue-600';
+            } else if (percentage >= 60) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-purple-600';
+                message.textContent = 'Bien ! Entraînez-vous à nommer des plages dans vos fichiers.';
+                message.className = 'text-xl mb-6 text-purple-600';
             } else {
-                disp.textContent = `${score}/${total} 📚`;
-                disp.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo sur les plages nommées.';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les cellules et plages nommées.';
                 message.className = 'text-xl mb-6 text-orange-600';
             }
-            
+
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
-            // Envoyer le résultat à Google Sheets
-            envoyerResultatQuiz(nomEtudiant, quizId, score, total, pct);
-            
+
+            envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
             window.scrollTo(0, 0);
         });
     </script>

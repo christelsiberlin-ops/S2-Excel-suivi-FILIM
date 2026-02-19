@@ -3,74 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Le mode tableau 1</title>
+    <title>Quiz - Le mode tableau (partie 1)</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen p-6">
+<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
-        <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">
-                    🎯 Quiz - Le mode tableau 1
-                </h1>
-                <p class="text-gray-600">Niveau 2 - Vidéo 15</p>
-                <p class="text-sm text-purple-600 font-semibold mt-2">6 questions</p>
-                <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
-            </div>
+        <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Le mode tableau (partie 1)</h1>
+            <p class="text-gray-600">Niveau 2 - Vidéo 15</p>
+            <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
+        </div>
 
-            <div id="quiz-container"></div>
+        <form id="quizForm" class="space-y-6">
 
-            <div id="result-container" class="hidden mt-8">
-                <div class="bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl p-6 text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Résultat</h2>
-                    <p id="score" class="text-4xl font-bold text-purple-600 mb-4"></p>
-                    <p id="message" class="text-gray-700 mb-4"></p>
-                    <button onclick="restartQuiz()" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold">
-                        🔄 Recommencer
-                    </button>
-                    <button onclick="window.close()" class="ml-4 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold">
-                        ← Retour au suivi
-                    </button>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Comment convertir une plage de données en tableau structuré Excel ?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="a" class="w-4 h-4">
+                        <span>Onglet Données &gt; Convertir en tableau</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="b" class="w-4 h-4">
+                        <span>Sélectionner la plage puis Onglet Insertion &gt; Tableau (ou Ctrl+T)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="c" class="w-4 h-4">
+                        <span>Onglet Accueil &gt; Formater en tableau</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4">
+                        <span>Clic droit &gt; Propriétés &gt; Mode tableau</span>
+                    </label>
                 </div>
             </div>
 
-            <button id="submit-btn" onclick="submitQuiz()" class="w-full mt-6 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-lg font-semibold">
-                ✅ Valider mes réponses
-            </button>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Quel est l'avantage principal d'un tableau structuré concernant les formules ?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="a" class="w-4 h-4">
+                        <span>Les formules sont calculées plus rapidement qu'avec des plages normales</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="b" class="w-4 h-4">
+                        <span>Les formules se propagent automatiquement à toute la colonne et utilisent des noms de colonnes lisibles (références structurées)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="c" class="w-4 h-4">
+                        <span>Il est impossible de modifier les formules dans un tableau structuré</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4">
+                        <span>Les formules d'un tableau s'appliquent automatiquement à tout le classeur</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Que se passe-t-il lorsqu'on ajoute une nouvelle ligne directement sous un tableau structuré ?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="a" class="w-4 h-4">
+                        <span>La nouvelle ligne reste en dehors du tableau et n'est pas prise en compte</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="b" class="w-4 h-4">
+                        <span>Le tableau s'étend automatiquement pour inclure la nouvelle ligne, avec formules et mise en forme</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="c" class="w-4 h-4">
+                        <span>Excel affiche un message d'erreur demandant confirmation</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4">
+                        <span>La mise en forme s'applique mais les formules ne s'étendent pas</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Quelle est la référence structurée pour désigner toute la colonne "Montant" d'un tableau nommé "Ventes" ?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="a" class="w-4 h-4">
+                        <span>Ventes!Montant</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="b" class="w-4 h-4">
+                        <span>Ventes[Montant]</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="c" class="w-4 h-4">
+                        <span>[Ventes]Montant</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4">
+                        <span>Montant(Ventes)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Qu'est-ce que la ligne de totaux dans un tableau structuré Excel ?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="a" class="w-4 h-4">
+                        <span>Une ligne obligatoire qui s'ajoute automatiquement à la création du tableau</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="b" class="w-4 h-4">
+                        <span>Une ligne optionnelle affichant des calculs (somme, moyenne, comptage...) activable depuis l'onglet Création du tableau</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="c" class="w-4 h-4">
+                        <span>Une ligne qui affiche uniquement la somme de toutes les colonnes numériques</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4">
+                        <span>La première ligne du tableau qui contient les en-têtes de colonnes</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    ✔ Valider mes réponses
+                </button>
+            </div>
+        </form>
+
+        <div id="results" class="hidden">
+            <div class="bg-white rounded-lg shadow-xl p-8 text-center">
+                <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
+                <div id="message" class="text-xl mb-6"></div>
+                <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
+                <button onclick="location.reload()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    🔄 Refaire le quiz
+                </button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
+                    ← Retour au suivi
+                </button>
+            </div>
         </div>
     </div>
 
     <script>
-        // ⚠️ REMPLACEZ PAR VOTRE URL GOOGLE SCRIPT
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
-        
-        // Récupérer le nom de l'étudiant depuis l'URL ou localStorage
+
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            
             if (nomFromUrl) {
                 localStorage.setItem('currentStudentName', nomFromUrl);
                 return nomFromUrl;
             }
-            
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
-        
-        // Envoyer le résultat du quiz à Google Sheets
+
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
-            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
-                console.log("URL Google Script non configurée");
-                return;
-            }
-            
+            if (!GOOGLE_SCRIPT_URL) return;
             try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         type: 'quiz',
                         nom: nomEtudiant,
@@ -80,184 +177,78 @@
                         pourcentage: pourcentage
                     })
                 });
-                console.log("Résultat du quiz envoyé à Google Sheets");
+                console.log("Résultat du quiz envoyé");
             } catch (error) {
-                console.error("Erreur envoi quiz:", error);
+                console.error("Erreur:", error);
             }
         }
 
-        // Identifier le quiz
-        const quizId = "N2-V15 Mode tableau 1";
+        const quizId = "N2-V15 Le mode tableau 1";
         const nomEtudiant = getNomEtudiant();
 
-        // Afficher le nom dans le header
-        const headerDiv = document.querySelector('.bg-white.rounded-2xl.shadow-xl.p-8.mb-6');
+        const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
         if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
             const nameTag = document.createElement('p');
-            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2 text-center';
+            nameTag.className = 'text-sm text-purple-600 font-medium mt-2';
             nameTag.textContent = '👤 ' + nomEtudiant;
-            headerDiv.querySelector('.text-center').appendChild(nameTag);
+            headerDiv.appendChild(nameTag);
         }
 
-        const questions = [
-            {
-                question: "Quel raccourci clavier permet de convertir rapidement une plage de données en tableau Excel ?",
-                options: [
-                    "Ctrl + T",
-                    "Ctrl + L",
-                    "Ctrl + M",
-                    "Ctrl + K"
-                ],
-                correct: 0,
-                explanation: "Ctrl + T (ou Ctrl + L sur certaines versions) permet de convertir rapidement une plage en tableau."
-            },
-            {
-                question: "Quel est l'avantage principal du mode tableau par rapport à une plage normale ?",
-                options: [
-                    "Il change uniquement la couleur des cellules",
-                    "Les formules s'adaptent automatiquement quand on ajoute des données",
-                    "Il permet uniquement de trier les données",
-                    "Il bloque les cellules pour éviter les modifications"
-                ],
-                correct: 1,
-                explanation: "Le mode tableau offre des formules dynamiques qui s'étendent automatiquement lors de l'ajout de nouvelles lignes."
-            },
-            {
-                question: "Comment s'appellent les références utilisées dans les tableaux Excel (exemple : [Montant]) ?",
-                options: [
-                    "Références relatives",
-                    "Références absolues",
-                    "Références structurées",
-                    "Références nommées"
-                ],
-                correct: 2,
-                explanation: "Les références structurées utilisent les noms de colonnes entre crochets, comme [Montant] ou [Nom]."
-            },
-            {
-                question: "Que se passe-t-il automatiquement quand vous tapez une formule dans la première cellule d'une colonne de tableau ?",
-                options: [
-                    "Rien de spécial",
-                    "La formule se copie automatiquement sur toute la colonne",
-                    "Excel demande une confirmation",
-                    "La cellule devient rouge"
-                ],
-                correct: 1,
-                explanation: "Dans un tableau Excel, une formule saisie dans une cellule se propage automatiquement à toute la colonne."
-            },
-            {
-                question: "Quelle ligne apparaît automatiquement en bas d'un tableau Excel pour faire des calculs ?",
-                options: [
-                    "La ligne de résumé",
-                    "La ligne de calcul",
-                    "La ligne des totaux",
-                    "La ligne de fin"
-                ],
-                correct: 2,
-                explanation: "La 'Ligne des totaux' permet d'ajouter facilement des calculs (somme, moyenne, etc.) en bas du tableau."
-            },
-            {
-                question: "Dans l'onglet 'Création de tableau', quelle option permet de revenir à une plage normale ?",
-                options: [
-                    "Supprimer le tableau",
-                    "Annuler le tableau",
-                    "Convertir en plage",
-                    "Retour à la normale"
-                ],
-                correct: 2,
-                explanation: "L'option 'Convertir en plage' permet de transformer un tableau en plage normale tout en conservant les données."
-            }
-        ];
+        const correctAnswers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b' };
 
-        let userAnswers = [];
+        const explanations = {
+            q1: "Pour convertir une plage en tableau structuré, sélectionnez une cellule dans la plage, puis utilisez Insertion > Tableau ou le raccourci Ctrl+T. Excel détecte automatiquement les en-têtes et les limites de la plage.",
+            q2: "Les tableaux structurés utilisent des références structurées (ex: =Tableau1[Montant]). De plus, toute formule saisie dans une colonne se propage automatiquement à toutes les lignes du tableau.",
+            q3: "C'est l'un des grands avantages des tableaux structurés : ils s'étendent automatiquement. En saisissant des données dans la ligne immédiatement sous le tableau, celui-ci intègre cette nouvelle ligne avec mise en forme et formules.",
+            q4: "Dans les tableaux structurés, la syntaxe des références est NomTableau[NomColonne]. Pour la colonne 'Montant' du tableau 'Ventes', on écrit Ventes[Montant]. Cette notation est plus lisible que les références classiques.",
+            q5: "La ligne de totaux est optionnelle et s'active depuis l'onglet Création > cocher 'Ligne des totaux'. Elle permet de choisir pour chaque colonne la fonction à afficher (somme, moyenne, max, min...) via un menu déroulant."
+        };
 
-        function displayQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = questions.map((q, index) => `
-                <div class="mb-8 p-6 bg-gray-50 rounded-lg border-l-4 border-purple-500">
-                    <h3 class="font-bold text-lg text-gray-800 mb-4">
-                        Question ${index + 1} : ${q.question}
-                    </h3>
-                    <div class="space-y-3">
-                        ${q.options.map((option, optIndex) => `
-                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-purple-50 transition-colors border border-gray-200">
-                                <input type="radio" name="q${index}" value="${optIndex}" 
-                                    class="w-5 h-5 text-purple-600 mr-3"
-                                    onchange="saveAnswer(${index}, ${optIndex})">
-                                <span class="text-gray-700">${option}</span>
-                            </label>
-                        `).join('')}
-                    </div>
-                    <div id="feedback-${index}" class="hidden mt-4 p-4 rounded-lg"></div>
-                </div>
-            `).join('');
-        }
-
-        function saveAnswer(questionIndex, answerIndex) {
-            userAnswers[questionIndex] = answerIndex;
-        }
-
-        function submitQuiz() {
-            if (userAnswers.filter(a => a !== undefined).length < questions.length) {
-                alert('⚠️ Veuillez répondre à toutes les questions avant de valider.');
-                return;
-            }
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
             let score = 0;
-            questions.forEach((q, index) => {
-                const feedbackDiv = document.getElementById(`feedback-${index}`);
-                const isCorrect = userAnswers[index] === q.correct;
-                
-                if (isCorrect) {
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let details = '';
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-300';
-                    feedbackDiv.innerHTML = `
-                        <p class="text-green-800 font-semibold">✅ Correct !</p>
-                        <p class="text-green-700 text-sm mt-1">${q.explanation}</p>
-                    `;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    feedbackDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300';
-                    feedbackDiv.innerHTML = `
-                        <p class="text-red-800 font-semibold">❌ Incorrect</p>
-                        <p class="text-red-700 text-sm mt-1">La bonne réponse était : <strong>${q.options[q.correct]}</strong></p>
-                        <p class="text-red-700 text-sm mt-1">${q.explanation}</p>
-                    `;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
-                feedbackDiv.classList.remove('hidden');
-            });
-
-            const percentage = Math.round((score / questions.length) * 100);
-            document.getElementById('score').textContent = `${score}/${questions.length} (${percentage}%)`;
-            
-            let message = '';
-            if (percentage === 100) {
-                message = '🎉 Parfait ! Vous maîtrisez le mode tableau 1 !';
-            } else if (percentage >= 80) {
-                message = '👏 Très bien ! Vous avez compris les concepts essentiels.';
-            } else if (percentage >= 60) {
-                message = '👍 Pas mal ! Revoyez les points manqués.';
-            } else {
-                message = '📚 Revoyez la vidéo pour mieux comprendre le mode tableau.';
             }
-            
-            document.getElementById('message').textContent = message;
-            document.getElementById('result-container').classList.remove('hidden');
-            document.getElementById('submit-btn').classList.add('hidden');
-            
-            // Envoyer le résultat à Google Sheets
-            envoyerResultatQuiz(nomEtudiant, quizId, score, questions.length, percentage);
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
-        function restartQuiz() {
-            userAnswers = [];
-            document.getElementById('result-container').classList.add('hidden');
-            document.getElementById('submit-btn').classList.remove('hidden');
-            displayQuiz();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const message = document.getElementById('message');
 
-        displayQuiz();
+            if (percentage >= 80) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez le mode tableau !';
+                message.className = 'text-xl mb-6 text-green-600';
+            } else if (percentage >= 60) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-purple-600';
+                message.textContent = 'Bien ! Pratiquez encore la création de tableaux structurés.';
+                message.className = 'text-xl mb-6 text-purple-600';
+            } else {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur le mode tableau.';
+                message.className = 'text-xl mb-6 text-orange-600';
+            }
+
+            document.getElementById('details').innerHTML = details;
+            document.getElementById('quizForm').style.display = 'none';
+            document.getElementById('results').classList.remove('hidden');
+
+            envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
+            window.scrollTo(0, 0);
+        });
     </script>
 </body>
 </html>

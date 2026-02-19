@@ -3,110 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Graphique barre</title>
+    <title>Quiz - Graphiques en barres</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Graphique barre</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Graphiques en barres</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 11</p>
-            <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances</p>
+            <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
+
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Un graphique en barres horizontales est idéal pour :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Quel type de graphique est le plus adapté pour comparer des catégories entre elles ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>Comparer des catégories avec des noms longs</span>
+                        <span>Le graphique en courbes</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>Afficher des évolutions temporelles</span>
+                        <span>Le graphique en barres ou en colonnes</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Montrer des proportions</span>
+                        <span>Le graphique en secteurs (camembert)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4">
+                        <span>Le graphique en nuage de points</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Pour créer un graphique à barres :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Quelle est la différence entre un graphique en barres et un graphique en colonnes ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>Insertion > Graphiques > Barres</span>
+                        <span>Il n'y a aucune différence, ce sont les mêmes graphiques</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>Données > Graphique</span>
+                        <span>Le graphique en barres est horizontal, le graphique en colonnes est vertical</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>Formules > Graphique</span>
+                        <span>Le graphique en barres ne peut afficher que 2 séries de données</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4">
+                        <span>Le graphique en colonnes s'utilise uniquement pour les données financières</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. La différence entre barres et colonnes :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Comment insérer un graphique dans Excel à partir d'une plage de données sélectionnée ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Barres = horizontales, Colonnes = verticales</span>
+                        <span>Onglet Accueil &gt; Graphique</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>C'est la même chose</span>
+                        <span>Onglet Insertion &gt; Graphiques &gt; Choisir le type</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Les barres sont plus larges</span>
+                        <span>Clic droit sur les données &gt; Créer un graphique</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4">
+                        <span>Onglet Formules &gt; Graphique automatique</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour empiler des barres :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Dans un graphique en barres groupées, que représente chaque groupe de barres ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Choisir "Barres empilées" lors de la création</span>
+                        <span>Une période de temps uniquement</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>Une catégorie avec plusieurs séries de données côte à côte</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Utiliser deux graphiques séparés</span>
+                        <span>Le total cumulé de toutes les données</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4">
+                        <span>Une seule série de données par feuille</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. L'ordre des barres peut être modifié via :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Quelle option permet de modifier le titre d'un graphique dans Excel ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>Le tri des données source ou les options d'axe</span>
+                        <span>Il est impossible de modifier le titre après création</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>Double-cliquer sur le titre du graphique pour le modifier directement</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>Uniquement en recréant le graphique</span>
+                        <span>Onglet Fichier &gt; Propriétés du graphique</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4">
+                        <span>Il faut supprimer et recréer le graphique</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700">✓ Valider</button>
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    ✔ Valider mes réponses
+                </button>
             </div>
         </form>
 
@@ -115,15 +138,19 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold">🔄 Refaire</button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold">← Retour</button>
+                <button onclick="location.reload()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    🔄 Refaire le quiz
+                </button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
+                    ← Retour au suivi
+                </button>
             </div>
         </div>
     </div>
 
     <script>
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
-        
+
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
@@ -133,7 +160,7 @@
             }
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
-        
+
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
             if (!GOOGLE_SCRIPT_URL) return;
             try {
@@ -156,59 +183,70 @@
             }
         }
 
-        const quizId = "N2-V11 Graphique barre";
+        const quizId = "N2-V11 Graphiques en barres";
         const nomEtudiant = getNomEtudiant();
 
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
         if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
             const nameTag = document.createElement('p');
-            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2';
+            nameTag.className = 'text-sm text-purple-600 font-medium mt-2';
             nameTag.textContent = '👤 ' + nomEtudiant;
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
+        const correctAnswers = { q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b' };
+
         const explanations = {
-            q1: 'Les barres horizontales permettent de lire facilement des noms de catégories longues.',
-            q2: 'On crée un graphique via Insertion > Graphiques, puis on choisit le type Barres.',
-            q3: 'Les barres sont horizontales (de gauche à droite), les colonnes sont verticales (de bas en haut).',
-            q4: 'Excel propose différents sous-types: barres groupées, empilées, empilées 100%.',
-            q5: 'On peut trier les données source ou inverser l\'ordre via les options d\'axe du graphique.'
+            q1: "Le graphique en barres ou en colonnes est idéal pour comparer des valeurs entre plusieurs catégories distinctes (ex : chiffre d'affaires par région).",
+            q2: "Le graphique en barres est horizontal (les barres vont de gauche à droite), tandis que le graphique en colonnes est vertical. On préfère les barres horizontales quand les étiquettes de catégories sont longues.",
+            q3: "Pour insérer un graphique, sélectionnez vos données puis allez dans l'onglet Insertion > groupe Graphiques et choisissez le type souhaité.",
+            q4: "Dans un graphique en barres groupées, chaque groupe représente une catégorie (ex : un mois) et les barres côte à côte représentent les différentes séries de données (ex : produit A, produit B...).",
+            q5: "Pour modifier le titre d'un graphique, il suffit de double-cliquer dessus pour entrer en mode édition, puis de taper le nouveau titre."
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            let score = 0, total = Object.keys(correctAnswers).length, details = '';
-            for (let q in correctAnswers) {
-                const ans = document.querySelector(`input[name="${q}"]:checked`);
-                if (ans && ans.value === correctAnswers[q]) {
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let details = '';
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-            const pct = Math.round((score / total) * 100);
-            const disp = document.getElementById('scoreDisplay');
-            if (pct >= 80) {
-                disp.textContent = `${score}/${total} 🎉`;
-                disp.className = 'text-5xl font-bold mb-4 text-green-600';
-                document.getElementById('message').textContent = 'Excellent ! Graphiques barres maîtrisés !';
-            } else if (pct >= 60) {
-                disp.textContent = `${score}/${total} 👍`;
-                disp.className = 'text-5xl font-bold mb-4 text-blue-600';
-                document.getElementById('message').textContent = 'Bien ! Pratiquez encore.';
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const message = document.getElementById('message');
+
+            if (percentage >= 80) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez les graphiques en barres !';
+                message.className = 'text-xl mb-6 text-green-600';
+            } else if (percentage >= 60) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-purple-600';
+                message.textContent = 'Bien ! Pratiquez encore la création de graphiques.';
+                message.className = 'text-xl mb-6 text-purple-600';
             } else {
-                disp.textContent = `${score}/${total} 📚`;
-                disp.className = 'text-5xl font-bold mb-4 text-orange-600';
-                document.getElementById('message').textContent = 'Revoyez la vidéo.';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur les graphiques en barres.';
+                message.className = 'text-xl mb-6 text-orange-600';
             }
+
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
-            envoyerResultatQuiz(nomEtudiant, quizId, score, total, pct);
-            
+
+            envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
             window.scrollTo(0, 0);
         });
     </script>

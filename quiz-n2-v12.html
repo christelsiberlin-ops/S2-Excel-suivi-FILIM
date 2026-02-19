@@ -3,110 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - NbSi et SommeSi</title>
+    <title>Quiz - Fonctions NB.SI et SOMME.SI</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen p-8">
     <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
-            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Fonctions NbSi et SommeSi</h1>
+            <h1 class="text-2xl font-bold text-purple-900 mb-2">Quiz - Fonctions NB.SI et SOMME.SI</h1>
             <p class="text-gray-600">Niveau 2 - Vidéo 12</p>
             <p class="text-sm text-gray-500 mt-2">✅ Validez vos connaissances avant de passer à la suite</p>
         </div>
 
         <form id="quizForm" class="space-y-6">
+
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">1. La fonction NB.SI permet de :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">1. Que fait la fonction NB.SI(A1:A10;"Paris") ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="a" class="w-4 h-4">
-                        <span>Compter les cellules répondant à un critère</span>
+                        <span>Elle additionne les valeurs dans A1:A10 si elles contiennent "Paris"</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="b" class="w-4 h-4">
-                        <span>Additionner toutes les cellules</span>
+                        <span>Elle compte le nombre de cellules contenant "Paris" dans A1:A10</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q1" value="c" class="w-4 h-4">
-                        <span>Calculer une moyenne</span>
+                        <span>Elle affiche "Paris" si la plage A1:A10 est vide</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q1" value="d" class="w-4 h-4">
+                        <span>Elle recherche la position de "Paris" dans la plage</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Syntaxe de SOMME.SI :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">2. Quelle est la syntaxe correcte de la fonction SOMME.SI ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="a" class="w-4 h-4">
-                        <span>=SOMME.SI(plage; critère; [somme_plage])</span>
+                        <span>=SOMME.SI(plage_somme ; critère ; plage_critère)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="b" class="w-4 h-4">
-                        <span>=SOMME.SI(critère; plage)</span>
+                        <span>=SOMME.SI(plage_critère ; critère ; plage_somme)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q2" value="c" class="w-4 h-4">
-                        <span>=SOMME.SI()</span>
+                        <span>=SOMME.SI(critère ; plage_critère)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q2" value="d" class="w-4 h-4">
+                        <span>=SOMME.SI(critère ; plage_somme ; plage_critère)</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">3. =NB.SI(A1:A10;">5") compte :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">3. Quelle formule calcule la somme des ventes (colonne B) uniquement pour les lignes où la région (colonne A) est "Nord" ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="a" class="w-4 h-4">
-                        <span>Les cellules contenant une valeur supérieure à 5</span>
+                        <span>=SOMME(A:A;"Nord";B:B)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="b" class="w-4 h-4">
-                        <span>Toutes les cellules</span>
+                        <span>=NB.SI(A:A;"Nord";B:B)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q3" value="c" class="w-4 h-4">
-                        <span>Les cellules égales à 5</span>
+                        <span>=SOMME.SI(A:A;"Nord";B:B)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q3" value="d" class="w-4 h-4">
+                        <span>=SOMME.SI(B:B;"Nord";A:A)</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">4. SOMME.SI peut utiliser des critères :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">4. Pour compter les cellules dont la valeur est supérieure à 100, quelle formule utiliser ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="a" class="w-4 h-4">
-                        <span>Texte, nombres, dates, opérateurs de comparaison</span>
+                        <span>=NB.SI(A1:A20;100)</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="b" class="w-4 h-4">
-                        <span>Uniquement des nombres</span>
+                        <span>=NB.SI(A1:A20;"&gt;100")</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q4" value="c" class="w-4 h-4">
-                        <span>Seulement du texte</span>
+                        <span>=NB.SI(A1:A20;A1&gt;100)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q4" value="d" class="w-4 h-4">
+                        <span>=COMPTER.SI(A1:A20;"&gt;100")</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Pour plusieurs critères, on utilise :</h3>
+                <h3 class="font-bold text-lg text-gray-800 mb-4">5. Quelle est la différence principale entre SOMME.SI et SOMME.SI.ENS ?</h3>
                 <div class="space-y-3">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="a" class="w-4 h-4">
-                        <span>NB.SI.ENS et SOMME.SI.ENS</span>
+                        <span>SOMME.SI.ENS est plus ancienne et moins précise</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="b" class="w-4 h-4">
-                        <span>Ce n'est pas possible</span>
+                        <span>SOMME.SI gère un seul critère, SOMME.SI.ENS permet plusieurs critères simultanés</span>
                     </label>
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
                         <input type="radio" name="q5" value="c" class="w-4 h-4">
-                        <span>NB.SI2 et SOMME.SI2</span>
+                        <span>SOMME.SI.ENS ne fonctionne qu'avec des nombres entiers</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="q5" value="d" class="w-4 h-4">
+                        <span>Il n'y a aucune différence entre les deux fonctions</span>
                     </label>
                 </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">✓ Valider mes réponses</button>
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    ✔ Valider mes réponses
+                </button>
             </div>
         </form>
 
@@ -115,43 +138,36 @@
                 <div id="scoreDisplay" class="text-5xl font-bold mb-4"></div>
                 <div id="message" class="text-xl mb-6"></div>
                 <div id="details" class="text-left bg-gray-50 p-4 rounded-lg mb-6"></div>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">🔄 Refaire le quiz</button>
-                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">← Retour au suivi</button>
+                <button onclick="location.reload()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    🔄 Refaire le quiz
+                </button>
+                <button onclick="window.close()" class="ml-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors">
+                    ← Retour au suivi
+                </button>
             </div>
         </div>
     </div>
 
     <script>
-        // ⚠️ REMPLACEZ PAR VOTRE URL GOOGLE SCRIPT
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhf_hODrQWcON7gINuGqQIeiy_Ga50Lpp1eP97SjfGKQjBHPpooAKhIr7qJ6NfG9L8/exec";
-        
-        // Récupérer le nom de l'étudiant depuis l'URL ou localStorage
+
         function getNomEtudiant() {
             const urlParams = new URLSearchParams(window.location.search);
             const nomFromUrl = urlParams.get('nom');
-            
             if (nomFromUrl) {
                 localStorage.setItem('currentStudentName', nomFromUrl);
                 return nomFromUrl;
             }
-            
             return localStorage.getItem('currentStudentName') || 'Étudiant inconnu';
         }
-        
-        // Envoyer le résultat du quiz à Google Sheets
+
         async function envoyerResultatQuiz(nomEtudiant, quizId, score, total, pourcentage) {
-            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes('VOTRE_URL')) {
-                console.log("URL Google Script non configurée");
-                return;
-            }
-            
+            if (!GOOGLE_SCRIPT_URL) return;
             try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         type: 'quiz',
                         nom: nomEtudiant,
@@ -161,76 +177,76 @@
                         pourcentage: pourcentage
                     })
                 });
-                console.log("Résultat du quiz envoyé à Google Sheets");
+                console.log("Résultat du quiz envoyé");
             } catch (error) {
-                console.error("Erreur envoi quiz:", error);
+                console.error("Erreur:", error);
             }
         }
 
-        // Identifier le quiz
-        const quizId = "N2-V12 NbSi et SommeSi";
+        const quizId = "N2-V12 NB.SI et SOMME.SI";
         const nomEtudiant = getNomEtudiant();
 
-        // Afficher le nom dans le header
         const headerDiv = document.querySelector('.bg-white.rounded-lg.shadow-xl.p-6.mb-6');
         if (headerDiv && nomEtudiant !== 'Étudiant inconnu') {
             const nameTag = document.createElement('p');
-            nameTag.className = 'text-sm text-indigo-600 font-medium mt-2';
+            nameTag.className = 'text-sm text-purple-600 font-medium mt-2';
             nameTag.textContent = '👤 ' + nomEtudiant;
             headerDiv.appendChild(nameTag);
         }
 
-        const correctAnswers = { q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a' };
+        const correctAnswers = { q1: 'b', q2: 'b', q3: 'c', q4: 'b', q5: 'b' };
+
         const explanations = {
-            q1: 'NB.SI compte le nombre de cellules qui répondent à un critère spécifique.',
-            q2: 'SOMME.SI prend : la plage à tester, le critère, et optionnellement la plage à additionner.',
-            q3: 'Le critère ">5" compte toutes les cellules avec une valeur numérique supérieure à 5.',
-            q4: 'On peut utiliser des critères variés : texte ("Paris"), nombres (>100), dates, etc.',
-            q5: 'Pour plusieurs critères simultanés, on utilise NB.SI.ENS et SOMME.SI.ENS (avec un S).'
+            q1: "NB.SI compte le nombre de cellules répondant à un critère. Ici, elle compte combien de cellules dans A1:A10 contiennent exactement 'Paris'.",
+            q2: "La syntaxe de SOMME.SI est : =SOMME.SI(plage_critère ; critère ; plage_somme). La plage critère est évaluée en premier, puis la somme est calculée sur la plage de somme correspondante.",
+            q3: "=SOMME.SI(A:A;\"Nord\";B:B) : Excel cherche 'Nord' dans la colonne A, et additionne les valeurs correspondantes dans la colonne B.",
+            q4: "Pour utiliser un opérateur de comparaison dans NB.SI, il faut le mettre entre guillemets : =NB.SI(A1:A20;\">100\"). Le critère est une chaîne de texte.",
+            q5: "SOMME.SI ne gère qu'un seul critère. SOMME.SI.ENS permet de combiner plusieurs critères : par exemple, ventes région 'Nord' ET mois 'Janvier'."
         };
 
         document.getElementById('quizForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            let score = 0, total = Object.keys(correctAnswers).length, details = '';
-            
-            for (let q in correctAnswers) {
-                const ans = document.querySelector(`input[name="${q}"]:checked`);
-                if (ans && ans.value === correctAnswers[q]) {
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let details = '';
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
                     score++;
-                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✓ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-green-600 font-bold">✔ Question ${question.slice(1)}</span> - Correct ! ${explanations[question]}</div>`;
                 } else {
-                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Q${q.slice(1)}</span> - ${explanations[q]}</div>`;
+                    details += `<div class="mb-2"><span class="text-red-600 font-bold">✗ Question ${question.slice(1)}</span> - ${explanations[question]}</div>`;
                 }
             }
-            
-            const pct = Math.round((score / total) * 100);
-            const disp = document.getElementById('scoreDisplay');
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const scoreDisplay = document.getElementById('scoreDisplay');
             const message = document.getElementById('message');
-            
-            if (pct >= 80) {
-                disp.textContent = `${score}/${total} 🎉`;
-                disp.className = 'text-5xl font-bold mb-4 text-green-600';
-                message.textContent = 'Excellent ! NbSi et SommeSi maîtrisés !';
+
+            if (percentage >= 80) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 🎉`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-green-600';
+                message.textContent = 'Excellent ! Vous maîtrisez NB.SI et SOMME.SI !';
                 message.className = 'text-xl mb-6 text-green-600';
-            } else if (pct >= 60) {
-                disp.textContent = `${score}/${total} 👍`;
-                disp.className = 'text-5xl font-bold mb-4 text-blue-600';
-                message.textContent = 'Bien ! Pratiquez encore.';
-                message.className = 'text-xl mb-6 text-blue-600';
+            } else if (percentage >= 60) {
+                scoreDisplay.textContent = `${score}/${totalQuestions} 👍`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-purple-600';
+                message.textContent = 'Bien ! Pratiquez encore ces fonctions conditionnelles.';
+                message.className = 'text-xl mb-6 text-purple-600';
             } else {
-                disp.textContent = `${score}/${total} 📚`;
-                disp.className = 'text-5xl font-bold mb-4 text-orange-600';
-                message.textContent = 'Revoyez la vidéo.';
+                scoreDisplay.textContent = `${score}/${totalQuestions} 📚`;
+                scoreDisplay.className = 'text-5xl font-bold mb-4 text-orange-600';
+                message.textContent = 'Revoyez la vidéo sur NB.SI et SOMME.SI.';
                 message.className = 'text-xl mb-6 text-orange-600';
             }
-            
+
             document.getElementById('details').innerHTML = details;
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('results').classList.remove('hidden');
-            
-            // Envoyer le résultat à Google Sheets
-            envoyerResultatQuiz(nomEtudiant, quizId, score, total, pct);
-            
+
+            envoyerResultatQuiz(nomEtudiant, quizId, score, totalQuestions, percentage);
             window.scrollTo(0, 0);
         });
     </script>
